@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./assets/app-ui.css">
+  <link rel="stylesheet" href="./assets/theme.css">
+  <style>
+    body{margin:0;background:var(--bg,#F7F6F3);font:13px system-ui,"Microsoft YaHei";padding:20px;color:var(--text,#333)}
+    #scope{display:flex;flex-direction:column;gap:16px;max-width:900px}
+    .probe{border:1px dashed #ddd;border-radius:8px;padding:8px}
+    .probe-h{font:10px monospace;color:#999;margin-bottom:6px}
+  </style>
+</head>
+<body>
+  <div id="scope" data-hana-app-ui></div>
+  <pre id="log" style="font:10px monospace;color:#a3452f;white-space:pre-wrap"></pre>
+  <script type="module">
+    const log = (m) => { document.getElementById("log").textContent += m + "\n"; };
+    const scope = document.getElementById("scope");
+    const mk = (label) => {
+      const d = document.createElement("div"); d.className = "probe";
+      const h = document.createElement("div"); h.className = "probe-h"; h.textContent = label;
+      d.appendChild(h); scope.appendChild(d); return d;
+    };
+    try {
+      const { mountAppUi, appUi, appUiIcon, APP_UI_CONTROLS } = await import("./assets/app-ui.js");
+      log("AVAILABLE: " + Object.keys(APP_UI_CONTROLS).join(", "));
+
+      const cases = [
+        ["Button primary", "Button", { children: "登记并扫描", variant: "primary", size: "md" }],
+        ["Button danger+iconLeft", "Button", { children: "打断扫描", variant: "danger", size: "sm", iconLeft: appUiIcon("failure") }],
+        ["Button loading", "Button", { children: "扫描中", loading: true }],
+        ["IconButton", "IconButton", { label: "复制", children: appUiIcon("check") }],
+        ["TextInput", "TextInput", { value: "C:\\projects\\atlas-workspace", label: "目录路径", hint: "等宽输入" }],
+        ["TextArea", "TextArea", { value: "line one\nline two", label: "预览", readOnly: true, rows: 3 }],
+        ["Checkbox", "Checkbox", { label: "跟随主题", checked: true }],
+        ["Select", "Select", { label: "仓库", value: "a", options: [{value:"a",label:"Atlas Workspace"},{value:"b",label:"other-repo"}] }],
+        ["Toggle", "Toggle", { checked: true, label: "打开" }],
+        ["NumberInput", "NumberInput", { value: 30, label: "limit" }],
+        ["SettingsSection", "SettingsSection", { title: "身份", description: "这个仓是什么", children: [ appUi("SettingsRow", { label: "目录", hint: "索引的物理锚点", control: appUi("TextInput", { value: "x", readOnly: true }) }) ] }],
+        ["SettingsStack", "SettingsStack", { children: [ appUi("SettingsRow", { label: "行一", control: "值" }), appUi("SettingsRow", { label: "行二", control: "值" }) ] }],
+        ["Inline", "Inline", { gap: "sm", align: "center", children: [ appUi("Button", { children: "A", size: "sm" }), appUi("Button", { children: "B", size: "sm", variant: "secondary" }) ] }],
+        ["Grid", "Grid", { minColumnWidth: "150px", gap: "md", children: [ appUi("ListRow",{title:"文件",description:"740",meta:"就绪"}), appUi("ListRow",{title:"目录",description:"76"}), appUi("ListRow",{title:"读不到",description:"0"}), appUi("ListRow",{title:"索引条目",description:"392"}) ] }],
+        ["Tabs", "Tabs", { tabs: [{id:"overview",label:"概览"},{id:"preview",label:"预览"},{id:"trace",label:"trace"}], value: "overview", onChange: () => {} }],
+        ["EmptyState", "EmptyState", { title: "还没有登记仓库", description: "一仓一索引，不跨仓", action: appUi("Button", { children: "登记", variant: "primary", size: "sm" }) }],
+        ["ErrorState", "ErrorState", { title: "overview 请求失败", message: "HTTP 500", action: appUi("Button", { children: "重试", size: "sm" }) }],
+        ["Busy", "Busy", { label: "正在读本仓索引" }],
+        ["ListRow full", "ListRow", { title: "Atlas Workspace", description: "C:\\projects\\atlas-workspace", meta: "就绪 · 740 文件 · 392 条", action: appUi("Button", { children: "查看", size: "sm", variant: "secondary" }) }],
+        ["Tooltip", "Tooltip", { label: "提示文本", children: appUi("Button", { children: "悬停我", size: "sm" }) }],
+        ["ContextMenu", "ContextMenu", { items: [{id:"a",label:"重扫"},{id:"b",label:"复制路径"}], onSelect: () => {}, children: appUi("Button", { children: "右键", size: "sm" }) }],
+        ["DropdownMenu", "DropdownMenu", { items: [{id:"a",label:"重扫"}], onSelect: () => {}, children: appUi("Button", { children: "菜单", size: "sm" }) }],
+        ["SaveButton", "SaveButton", { children: "保存", onClick: () => {} }],
+        ["VerificationButton", "VerificationButton", { children: "验证", onClick: () => {} }],
+      ];
+
+      const out = [];
+      for (const [label, name, props] of cases) {
+        const host = mk(label);
+        try {
+          const handle = mountAppUi(host, name, props);
+          out.push("=== " + label + " (" + name + ")\n" + host.innerHTML.slice(0, 700));
+        } catch (e) {
+          out.push("=== " + label + " ERR [" + (e.code||"") + "] " + e.message);
+        }
+      }
+      log("ALL CASES DONE");
+      document.title = "done";
+      window.__probeOut = out.join("\n\n");
+    } catch (e) {
+      log("FATAL " + e.name + " " + e.message);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>扫描报告</title>
+  <link rel="stylesheet" href="./assets/app-ui.css">
+  <link rel="stylesheet" href="./assets/report.css">
+</head>
+<body>
+  <!-- 扫描报告卡：一次扫描 = 一张能递出去的卡。
+       卡片在聊天流里是 flexible 高度模式，整页只有内容高度，不写 100vh。
+       页面自取数据（宿主不传触发消息的 payload，见 ui/CARD-DOCTRINE.md §2.4）。 -->
+  <main id="root" data-hana-app-ui data-status="loading">
+
+    <!-- ===== 整页态：空 / 错（与 report-body 互斥） ===== -->
+    <section id="rep-center" class="rep-center" hidden>
+      <div id="center-mount"></div>
+      <pre id="center-detail" class="err-detail mono"></pre>
+    </section>
+
+    <!-- ===== 报告主体 ===== -->
+    <div id="rep-body" hidden>
+
+      <!-- 身份。
+           ⚠ 不设右上角徽标：官方 card-guide §2 规定
+             "keep text, data graphics and controls out of the top-right 100 × 40 CSS px"。
+           旧版把状态徽标放在右上（.rh 的 justify-content: space-between），
+           卡片宽 < ~760px 时会坐进那块留空区，与宿主控件重叠。
+           现改为徽标跟在标题后面（左侧流向），全宽都不越界。 -->
+      <header class="rh">
+        <h1 id="rep-name">—</h1>
+        <span id="rep-slug" class="mono"></span>
+        <span id="rep-badge-mount" class="rh-badge"></span>
+      </header>
+      <p id="rep-dir" class="rep-dir mono"></p>
+
+      <!-- 三数 + 两行事实 -->
+      <section class="block" data-block="stats" data-status="empty" aria-label="扫描清点">
+        <div class="stat-grid">
+          <div class="stat-cell">
+            <span class="stat-label">文件数</span>
+            <span id="n-files" class="stat-value mono">—</span>
+            <span id="h-files" class="stat-hint"></span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">索引条目</span>
+            <span id="n-entries" class="stat-value mono">—</span>
+            <span id="h-entries" class="stat-hint"></span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-label">读不到的目录</span>
+            <span id="n-denied" class="stat-value mono">—</span>
+            <span id="h-denied" class="stat-hint"></span>
+          </div>
+        </div>
+
+        <div class="kv">
+          <div class="kv-row">
+            <span class="kv-k">上次扫描</span>
+            <span id="k-time" class="kv-v"></span>
+          </div>
+          <div class="kv-row">
+            <span class="kv-k">索引文件</span>
+            <span id="k-index" class="kv-v mono"></span>
+          </div>
+        </div>
+
+        <p id="rep-note" class="rep-note" hidden></p>
+      </section>
+
+      <!-- 操作 -->
+      <div class="rep-actions">
+        <div id="act-rescan"></div>
+        <div id="act-panel"></div>
+      </div>
+
+      <!-- 来路：可溯源。哪条地址答的、还是回退到了内联样本，都写在这里 -->
+      <p id="rep-source" class="foot-note mono"></p>
+    </div>
+
+  </main>
+
+  <script type="module" src="./assets/report.js"></script>
+</body>
+</html>

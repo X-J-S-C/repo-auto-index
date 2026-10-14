@@ -1,0 +1,18 @@
+# 依赖
+node_modules/
+
+# 测试产出（截图与报告可重新生成）
+tests/out/
+# 只忽略产出目录的截图。此前是 tests/**/*.png，会连 tests/assets/ 下的资源副本
+# （rice-paper 纸纹理）一起忽略掉，导致克隆仓库后验证台缺资源。
+tests/out/**/*.png
+
+# 渲染台的截图产出。shoot*.mjs / sweep*.mjs 默认把图写在 tests/ 根，
+# 那是产出物不是资产，不入库（按需重跑即可再生成）。
+# 例外：repo-auto-index/ 下的 icon.png / cover.png / sdk 纸纹理是真资产，不在此列。
+/tests/*.png
+
+# 临时文件
+*.tmp
+*.log
+_tmp/

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "repos": [
+    {
+      "id": "atlas-workspace",
+      "name": "Atlas Workspace",
+      "dir": "C:\\projects\\atlas-workspace",
+      "gitUrl": null,
+      "status": "done",
+      "progress": {
+        "phase": "done",
+        "total": 740,
+        "scanned": 815,
+        "dirCount": 76,
+        "denied": 0,
+        "entries": 392,
+        "entryLines": 473,
+        "capped": false
+      },
+      "taskId": null,
+      "error": null,
+      "registeredAt": "2026-10-12T12:15:53.931Z",
+      "updatedAt": "2026-10-12T13:54:14.222Z",
+      "startedAt": "2026-10-12T13:54:13.088Z",
+      "finishedAt": "2026-10-12T13:54:14.221Z",
+      "index": {
+        "file": "aoci.code.txt",
+        "files": [
+          "aoci.code.txt",
+          "aoci.meta.txt",
+          "aoci.txt"
+        ],
+        "entries": 392,
+        "entryLines": 473,
+        "hasIndex": true
+      }
+    }
+  ]
+}

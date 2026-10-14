@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>仓库自动索引</title>
+  <link rel="stylesheet" href="./assets/app-ui.css">
+  <link rel="stylesheet" href="./assets/panel.css">
+</head>
+<body>
+  <main id="root" data-hana-app-ui data-status="loading">
+
+    <!-- ===== 顶栏 ===== -->
+    <header class="bar">
+      <div class="bar-title">
+        <span class="mark" aria-hidden="true"></span>
+        <h1>仓库自动索引</h1>
+        <span id="ov-stamp" class="stamp"></span>
+      </div>
+      <div class="bar-actions">
+        <span id="bar-hint" class="bar-hint"></span>
+        <div id="refresh-mount"></div>
+      </div>
+    </header>
+
+    <!-- ===== 整页错误 ===== -->
+    <section id="err-view" class="view-center" hidden>
+      <div id="err-mount"></div>
+      <pre id="err-detail" class="err-detail mono"></pre>
+      <p id="err-datadir" class="tiny mono"></p>
+    </section>
+
+    <!-- ===== 空态 ===== -->
+    <section id="empty-view" class="view-center" hidden>
+      <div id="empty-mount"></div>
+      <div class="add-box">
+        <div id="add-dir-mount"></div>
+        <div id="add-name-mount"></div>
+        <div id="add-submit-mount" class="add-submit"></div>
+        <p id="add-status" class="add-status" hidden></p>
+      </div>
+      <ul class="add-notes">
+        <li>只登记<strong>已存在</strong>的目录，不私自 clone。目录不存在会返回 400，先 clone 再登记。</li>
+        <li>同一目录重复登记 = 更新，不新增。</li>
+        <li>克隆在宿主侧做，或让 Agent 调 <code>repo_index_add({dir, gitUrl})</code>。</li>
+      </ul>
+    </section>
+
+    <!-- ===== 主体 ===== -->
+    <div id="board" class="board" hidden>
+
+      <!-- A 仓库列表 -->
+      <nav class="projects" aria-label="仓库列表">
+        <div class="side-head">
+          <span class="side-title">仓库</span>
+          <span id="side-count" class="side-count mono"></span>
+        </div>
+        <div id="summary" class="summary"></div>
+        <div id="repolist" class="repolist"></div>
+        <div class="side-add">
+          <div id="add-inline-mount"></div>
+        </div>
+      </nav>
+
+      <!-- 详情 -->
+      <section id="detail" class="detail">
+
+        <!-- B1 身份 -->
+        <div class="d-head">
+          <div class="dh-left">
+            <h2 id="id-name">—</h2>
+            <span id="id-slug" class="mono"></span>
+          </div>
+          <div id="id-badge-mount" class="dh-badge"></div>
+        </div>
+        <div class="d-meta">
+          <div class="d-meta-row">
+            <span class="dm-k">目录</span>
+            <span id="id-dir" class="dm-v mono"></span>
+            <div id="copy-dir-mount"></div>
+          </div>
+          <div class="d-meta-row" id="id-git-row" hidden>
+            <span class="dm-k">远端</span>
+            <span id="id-git" class="dm-v mono"></span>
+            <div id="copy-git-mount"></div>
+          </div>
+          <div class="d-meta-row">
+            <span class="dm-k">时间</span>
+            <span id="id-times" class="dm-v"></span>
+          </div>
+        </div>
+
+        <!-- 页签 -->
+        <div id="tabs-mount" class="tabs-bar"></div>
+
+        <!-- 概览 -->
+        <div class="pane" data-pane="overview">
+          <div class="block" data-block="progress" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">扫描</span>
+              <span id="progress-note" class="bh-note"></span>
+            </div>
+            <div id="progress-indet" class="indet" hidden></div>
+            <div id="progress-counters" class="counters"></div>
+            <div id="progress-actions" class="block-actions"></div>
+          </div>
+
+          <div class="block" data-block="stats" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">清点</span>
+              <span id="stats-note" class="bh-note"></span>
+            </div>
+            <div id="stats-mount"></div>
+            <p id="stats-foot" class="foot-note"></p>
+          </div>
+
+          <div class="block" data-block="ops" data-status="empty">
+            <div class="block-head"><span class="bh-title">操作</span></div>
+            <div id="ops-mount" class="block-actions"></div>
+          </div>
+
+          <div class="block" data-block="deliver" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">交付</span>
+              <span id="deliver-note" class="bh-note"></span>
+            </div>
+            <!-- 目标会话：投递去向必须可见。
+                 以前这里只有一行「已投递」的文字，用户不知道送给了哪个会话，
+                 面板与聊天又是两个视图，送完也看不见。现改为：
+                 目标行（标题/id/跳过去看）+ 会话选择器（列出会话，可搜可选）。 -->
+            <div id="deliver-target" class="deliver-target" data-status="empty">
+              <span class="dt-label">目标会话</span>
+              <span id="dt-title" class="dt-title"></span>
+              <span id="dt-id" class="dt-id mono"></span>
+              <span id="dt-jump-mount" class="dt-jump"></span>
+              <span id="dt-pick-mount" class="dt-pick"></span>
+            </div>
+            <!-- 会话选择器：默认收起，点「换会话」才展开。
+                 列表按 cwd 匹配仓库分组（本仓的排最前），支持按标题/目录过滤。 -->
+            <div id="session-picker" class="session-picker" hidden>
+              <div class="sp-head">
+                <span id="sp-count" class="sp-count"></span>
+                <span id="sp-close-mount" class="sp-close"></span>
+              </div>
+              <div id="sp-filter-mount" class="sp-filter"></div>
+              <div id="sp-list" class="sp-list"></div>
+            </div>
+            <div id="deliver-mount" class="block-actions"></div>
+            <p id="deliver-foot" class="foot-note"></p>
+          </div>
+        </div>
+
+        <!-- 索引 -->
+        <div class="pane" data-pane="index" hidden>
+          <div class="block" data-block="index" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">索引文件</span>
+              <span id="index-time" class="bh-note"></span>
+            </div>
+            <div id="index-info" class="kv"></div>
+            <!-- 缺索引时的指路区：告诉新人下一步做什么，并给一个跳到链路卡的入口。
+                 以前这里只有一句「未读到索引：可能不存在，也可能存在但读取失败」——
+                 把「没装 AOCI」「装了没 init」「文件读失败」三种完全不同处境混成一句，
+                 等于没说。现在分开说，并把「装 AOCI」写出来。 -->
+            <div id="index-guide" class="index-guide" hidden>
+              <div id="index-guide-mount"></div>
+            </div>
+            <p id="index-foot" class="foot-note"></p>
+          </div>
+
+          <div class="block" data-block="preview" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">预览</span>
+              <span id="preview-count" class="bh-note"></span>
+              <div id="preview-actions" class="bh-actions"></div>
+            </div>
+            <pre id="preview-body" class="mono code-box"></pre>
+          </div>
+        </div>
+
+        <!-- 搜索 -->
+        <div class="pane" data-pane="search" hidden>
+          <div class="block" data-block="search" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">搜本仓</span>
+              <span id="scope-name" class="bh-note"></span>
+            </div>
+            <div class="search-row">
+              <input id="search-q" type="text" class="search-input mono" placeholder="输入关键词" autocomplete="off" spellcheck="false">
+              <div id="search-submit-mount"></div>
+            </div>
+            <p id="search-semantics" class="foot-note">子串匹配，忽略大小写，不分词、不支持正则。范围＝本仓三个 aoci 文件合并后的文本。只搜本仓，不跨仓；不搜源码与文件名。</p>
+            <div id="search-results" class="search-results"></div>
+          </div>
+        </div>
+
+        <!-- 轨迹 -->
+        <div class="pane" data-pane="trace" hidden>
+          <div class="block" data-block="trace" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">扫描轨迹</span>
+              <div id="trace-actions" class="bh-actions"></div>
+            </div>
+            <p id="trace-path" class="foot-note mono"></p>
+            <pre id="trace-body" class="mono code-box"></pre>
+          </div>
+        </div>
+
+        <!-- 关系 -->
+        <div class="pane" data-pane="relations" hidden>
+          <div class="block" data-block="graph" data-status="empty">
+            <div class="block-head">
+              <span class="bh-title">关系</span>
+              <span id="graph-note" class="bh-note"></span>
+              <div id="graph-actions" class="bh-actions"></div>
+            </div>
+            <div class="tabs-bar" id="graph-mode-mount"></div>
+            <div id="graph-view"></div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- ===== C 环境 ===== -->
+    <footer id="sys" class="sys" hidden>
+      <div class="sys-row"><span class="sys-k">dataDir</span><span id="sys-datadir" class="sys-v mono"></span></div>
+      <div class="sys-row"><span class="sys-k">写盘</span><span id="sys-write" class="sys-v"></span></div>
+      <div class="sys-row"><span class="sys-k">任务</span><span id="sys-task" class="sys-v mono"></span></div>
+      <div class="sys-row"><span class="sys-k">权限</span><span id="sys-perms" class="sys-v"></span></div>
+      <div class="sys-row"><span class="sys-k">上限</span><span id="sys-limits" class="sys-v"></span></div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="./assets/panel.js"></script>
+</body>
+</html>

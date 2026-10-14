@@ -1,0 +1,201 @@
+/* 仓库自动索引 · 链路体检卡样式
+   与面板、报告卡同源：同一套纸面 token，颜色全部读宿主主题变量。
+   色彩基线（米白纸质感）来自 panel.css / report.css，不另起一套。
+
+   尺寸：卡片在聊天流里是 flexible 高度模式，整页只占内容高度。
+   不写 100vh、不写固定 px 高；宽度铺满 iframe 给的那一栏。
+
+   ⚠ 顶部 40px 留空：官方 card-guide §2 规定
+     "keep text, data graphics and controls out of the top-right 100 × 40 CSS px"。
+   本卡的做法是整条首行都从 40px 以下开始（#root 的 padding-top），
+   这样无论卡片多宽，右上那块都不会被文字压住。
+   量法见 tests/README.md「右上留空」一条。 */
+
+:root {
+  --paper: var(--bg, #F7F6F3);
+  --card: var(--bg-card, #FFFFFF);
+  --line: var(--border, #EAEAEA);
+  --line-soft: color-mix(in srgb, var(--line) 55%, transparent);
+  --ink: var(--text, #1b1b1d);
+  --ink-2: var(--text-light, #4a4640);
+  --ink-3: var(--text-muted, #8a857c);
+  --accent: var(--accent, #537D96);
+  --ok: var(--green, #4F7A52);
+  --warn: #9A7B3F;
+  --danger: var(--danger, #8B3A3A);
+  --mono: var(--font-mono, ui-monospace, SFMono-Regular, "Cascadia Mono", Menlo, Consolas, monospace);
+  --r-card: var(--radius-card, 12px);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: var(--fs-body, 13px)/1.6 var(--font-ui, system-ui), "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+[hidden] { display: none !important; }
+
+/* 根节点不撑满：卡片高度 = 内容高度。
+   padding-top 40 = 官方规定的那条顶部留空带。 */
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px 18px 18px;
+  max-width: 720px;
+  cursor: default;
+}
+
+.ring:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+.mono { font-family: var(--mono); }
+
+/* ── 身份（不占右上：徽标跟在标题后面，左侧流向） ── */
+.ch {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.ch h1 {
+  margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -.005em;
+  white-space: nowrap;
+}
+.ch .slug { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+
+.ch-dir {
+  margin: -9px 0 0; font-family: var(--mono); font-size: 10.5px; color: var(--ink-3);
+  word-break: break-all;
+}
+
+/* ── 徽标 ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .02em;
+  padding: 2px 7px; border-radius: 4px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink-2);
+  white-space: nowrap; flex-shrink: 0;
+}
+.badge::before {
+  content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--ink-3); flex-shrink: 0;
+}
+.badge.b-ok { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 35%, var(--line)); }
+.badge.b-ok::before { background: var(--ok); }
+.badge.b-warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, var(--line)); }
+.badge.b-warn::before { background: var(--warn); }
+.badge.b-bad { color: var(--danger); border-color: color-mix(in srgb, var(--danger) 35%, var(--line)); }
+.badge.b-bad::before { background: var(--danger); }
+.badge.b-mute::before { background: var(--ink-3); }
+
+/* ── 六环链路 ── */
+.chain {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  padding: 6px 14px;
+}
+/* 连接线：从第一颗点到最后一点的竖直细线，画在点的左列上 */
+.chain::before {
+  content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px;
+  width: 1px; background: var(--line-soft);
+}
+.ring {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8px 26px 48px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+  padding: 7px 0;
+}
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--card); border: 1.5px solid var(--ink-3);
+  justify-self: center; z-index: 1;
+}
+.ring[data-s="ok"] .dot { background: var(--ok); border-color: var(--ok); }
+.ring[data-s="warn"] .dot { background: var(--card); border-color: var(--warn); border-width: 2px; }
+.ring[data-s="bad"] .dot { background: var(--card); border-color: var(--danger); border-width: 2px; }
+.ring[data-s="wait"] .dot { background: var(--card); border-color: var(--line); }
+
+.rnum { font-family: var(--mono); font-size: 10px; color: var(--ink-3); letter-spacing: .02em; }
+
+/* 展开后：证据换行显示全文，来源文件另起一行 */
+.ring[data-open="1"] .revi { white-space: normal; }
+.ring[data-open="1"] { grid-template-rows: auto auto; }
+.rsrc {
+  grid-column: 4;
+  font-size: 10px; color: var(--ink-3);
+  padding-top: 2px; word-break: break-all;
+}
+.rname { font-size: 12.5px; font-weight: 500; color: var(--ink); }
+.revi {
+  font-size: 11.5px; color: var(--ink-2); min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ring[data-s="wait"] .rname,
+.ring[data-s="wait"] .revi { color: var(--ink-3); }
+.ring[data-s="bad"] .rname { color: var(--danger); }
+
+/* 可打断的那一环挂一个小红点，说明这里真有按钮能停 */
+.rcut {
+  font-family: var(--mono); font-size: 9.5px; color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, var(--line));
+  border-radius: 3px; padding: 0 4px; margin-left: 6px;
+  white-space: nowrap;
+}
+
+/* ── 三权 ── */
+.rights {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line);
+  border-radius: var(--r-card); overflow: hidden;
+}
+.rt { background: var(--card); padding: 10px 12px; }
+.rt h4 {
+  margin: 0 0 3px; font-size: 11.5px; font-weight: 600; color: var(--ink);
+  display: flex; align-items: center; gap: 5px;
+}
+.rt h4::before {
+  content: ""; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0;
+}
+.rt p { margin: 0; font-size: 11px; line-height: 1.5; color: var(--ink-3); }
+
+/* ── 缺环修复 ── */
+.fix {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--r-card); padding: 12px 14px;
+}
+.fix h3 { margin: 0 0 6px; font-size: 12.5px; font-weight: 600; color: var(--ink); }
+.fix ol { margin: 0; padding-left: 18px; font-size: 11.5px; color: var(--ink-2); line-height: 1.75; }
+.fix code {
+  font-family: var(--mono); font-size: 11px;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 3px; padding: 0 4px;
+}
+.fix .after { margin: 7px 0 0; font-size: 11px; color: var(--ink-3); }
+
+/* ── 操作 ── */
+.ch-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* 来路：可溯源 */
+.ch-src {
+  margin: 0; font-family: var(--mono); font-size: 10px; color: var(--ink-3);
+  word-break: break-all;
+}
+
+/* 窄屏：三权竖排，链路保持单列 */
+@media (max-width: 520px) {
+  .rights { grid-template-columns: 1fr; }
+}

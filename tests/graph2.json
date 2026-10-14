@@ -1,0 +1,4434 @@
+{
+  "entries": [
+    {
+      "name": "threshold-caption",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "Z",
+      "module": "Z",
+      "F": "临时产物：配置，涉及 巡检",
+      "R": "-"
+    },
+    {
+      "name": "coverage-digest.gitattributes",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "F",
+      "module": "V",
+      "F": "会话 的声明式配置，定义 验收",
+      "R": "-"
+    },
+    {
+      "name": "partition-parser.gitignore",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "F",
+      "module": "V",
+      "F": "配置文件：声明 缓存 与 压测 的取值",
+      "R": "-"
+    },
+    {
+      "name": "latency-layout.md",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "S",
+      "module": "G",
+      "F": "记录 路由 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "partition-profile.md",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "S",
+      "module": "Q",
+      "F": "模板 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "backpressure-cache.html",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "E",
+      "module": "U",
+      "F": "任务 的入口，负责 验收 的初始化与分发",
+      "R": "-"
+    },
+    {
+      "name": "throughput-import.md",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "S",
+      "module": "Q",
+      "F": "词表 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "baseline-search.md",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 基线 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "warmup-transcript.svg",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "F",
+      "module": "A",
+      "F": "配置文件：声明 快照 与 巡检 的取值",
+      "R": "-"
+    },
+    {
+      "name": "idempotency-queue.md",
+      "dir": "C:/projects/atlas-workspace/",
+      "layer": "S",
+      "module": "O",
+      "F": "记录 通道 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "fanout-dispatcher.json",
+      "dir": "C:/projects/atlas/.agent/",
+      "layer": "F",
+      "module": "C",
+      "F": "配置文件：声明 队列 与 压测 的取值",
+      "R": "code:.agent/sessions/replication-import.json"
+    },
+    {
+      "name": "rollback-adapter.json",
+      "dir": "C:/projects/atlas/.agent/sessions/",
+      "layer": "P",
+      "module": "M",
+      "F": "校验 的持久化读写，落盘为 构建",
+      "R": "code:.agent/sessions/replication-import.json"
+    },
+    {
+      "name": "replication-import.json",
+      "dir": "C:/projects/atlas/.agent/sessions/",
+      "layer": "P",
+      "module": "M",
+      "F": "负责 渲染 的存储与 巡检 的恢复",
+      "R": "code:.agent/sessions/rollback-adapter.json"
+    },
+    {
+      "name": "retention-note.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "导出 的声明式配置，定义 验收",
+      "R": "-"
+    },
+    {
+      "name": "handoff-caption.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "配置文件：声明 索引 与 压测 的取值",
+      "R": "-"
+    },
+    {
+      "name": "latency-graph.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "配置 的声明式配置，定义 构建",
+      "R": "-"
+    },
+    {
+      "name": "compaction-timeline.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 会话 与 巡检 的取值",
+      "R": "code:.notebook/extensions/git-plugin/rollback-validator.js, code:.notebook/extensions/calendar/rollback-validator.js, code:.notebook/extensions/metrics-dashboard/throughput-bundle.json"
+    },
+    {
+      "name": "drift-buffer.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "缓存 的声明式配置，定义 验收",
+      "R": "-"
+    },
+    {
+      "name": "compaction-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "配置文件：声明 路由 与 压测 的取值",
+      "R": "-"
+    },
+    {
+      "name": "warmup-theme.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "模板 的声明式配置，定义 构建",
+      "R": "-"
+    },
+    {
+      "name": "snapshot-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "配置文件：声明 任务 与 巡检 的取值",
+      "R": "-"
+    },
+    {
+      "name": "idempotency-buffer.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "词表 的声明式配置，定义 验收",
+      "R": "-"
+    },
+    {
+      "name": "throttling-import.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "配置文件：声明 基线 与 压测 的取值",
+      "R": "code:.notebook/extensions/tasks-plugin/rollback-validator.js"
+    },
+    {
+      "name": "coverage-renderer.json",
+      "dir": "C:/projects/atlas/.notebook/",
+      "layer": "F",
+      "module": "C",
+      "F": "快照 的声明式配置，定义 构建",
+      "R": "-"
+    },
+    {
+      "name": "snapshot-note.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/metrics-dashboard/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 通道 与 巡检 的取值",
+      "R": "code:.notebook/extensions/metrics-dashboard/throughput-bundle.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/metrics-dashboard/",
+      "layer": "F",
+      "module": "E",
+      "F": "队列 的声明式配置，定义 验收",
+      "R": "code:.notebook/extensions/metrics-dashboard/snapshot-note.json, code:.notebook/extensions/metrics-dashboard/threshold-theme.css"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/metrics-dashboard/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 校验 与 压测 的取值",
+      "R": "code:.notebook/extensions/metrics-dashboard/throughput-bundle.json"
+    },
+    {
+      "name": "snapshot-note.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/calendar/",
+      "layer": "F",
+      "module": "C",
+      "F": "渲染 的声明式配置，定义 构建",
+      "R": "code:.notebook/extensions/calendar/throughput-bundle.json"
+    },
+    {
+      "name": "rollback-validator.js",
+      "dir": "C:/projects/atlas/.notebook/extensions/calendar/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 导出 并暴露 巡检 接口",
+      "R": "code:.notebook/extensions/calendar/throughput-bundle.json, code:.notebook/extensions/calendar/snapshot-note.json, code:.notebook/compaction-bundle.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/calendar/",
+      "layer": "F",
+      "module": "E",
+      "F": "索引 的声明式配置，定义 验收",
+      "R": "code:.notebook/extensions/calendar/snapshot-note.json, code:.notebook/extensions/calendar/rollback-validator.js"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/dataview/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 配置 与 压测 的取值",
+      "R": "code:.notebook/extensions/dataview/threshold-theme.css"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/dataview/",
+      "layer": "F",
+      "module": "E",
+      "F": "会话 的声明式配置，定义 构建",
+      "R": "code:.notebook/extensions/dataview/throughput-bundle.json"
+    },
+    {
+      "name": "snapshot-note.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/sketch-plugin/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 缓存 与 巡检 的取值",
+      "R": "code:.notebook/extensions/sketch-plugin/throughput-bundle.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/sketch-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "路由 的声明式配置，定义 验收",
+      "R": "code:.notebook/extensions/sketch-plugin/snapshot-note.json, code:.notebook/extensions/sketch-plugin/threshold-theme.css"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/sketch-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 模板 与 压测 的取值",
+      "R": "code:.notebook/extensions/sketch-plugin/throughput-bundle.json"
+    },
+    {
+      "name": "rollback-validator.js",
+      "dir": "C:/projects/atlas/.notebook/extensions/git-plugin/",
+      "layer": "E",
+      "module": "R",
+      "F": "任务 的入口，负责 构建 的初始化与分发",
+      "R": "code:.notebook/compaction-timeline.json, code:partition-parser.gitignore"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/git-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 词表 与 巡检 的取值",
+      "R": "code:.notebook/extensions/git-plugin/rollback-validator.js, code:.notebook/extensions/git-plugin/threshold-theme.css, code:.notebook/extensions/git-plugin/retention-transcript.sh"
+    },
+    {
+      "name": "retention-transcript.sh",
+      "dir": "C:/projects/atlas/.notebook/extensions/git-plugin/",
+      "layer": "R",
+      "module": "S",
+      "F": "基线 的运行基础组件，支撑 验收",
+      "R": "code:.notebook/extensions/git-plugin/rollback-validator.js"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/git-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 快照 与 压测 的取值",
+      "R": "code:.notebook/extensions/git-plugin/rollback-validator.js"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/rest-api-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "通道 的声明式配置，定义 构建",
+      "R": "code:.notebook/extensions/rest-api-plugin/threshold-theme.css, code:partition-parser.gitignore"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/rest-api-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 队列 与 巡检 的取值",
+      "R": "code:.notebook/extensions/rest-api-plugin/throughput-bundle.json"
+    },
+    {
+      "name": "rollback-validator.js",
+      "dir": "C:/projects/atlas/.notebook/extensions/tasks-plugin/",
+      "layer": "E",
+      "module": "W",
+      "F": "校验 的入口，负责 验收 的初始化与分发",
+      "R": "code:.notebook/extensions/tasks-plugin/throughput-bundle.json, code:.notebook/throttling-import.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/tasks-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 渲染 与 压测 的取值",
+      "R": "code:.notebook/extensions/tasks-plugin/rollback-validator.js, code:.notebook/extensions/tasks-plugin/threshold-theme.css"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/tasks-plugin/",
+      "layer": "F",
+      "module": "E",
+      "F": "导出 的声明式配置，定义 构建",
+      "R": "code:.notebook/extensions/tasks-plugin/rollback-validator.js"
+    },
+    {
+      "name": "snapshot-note.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/realagent/",
+      "layer": "P",
+      "module": "M",
+      "F": "负责 索引 的存储与 巡检 的恢复",
+      "R": "code:.agent/sessions/replication-import.json, code:.notebook/extensions/realagent/throughput-bundle.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/realagent/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置 的声明式配置，定义 验收",
+      "R": "code:.notebook/extensions/realagent/snapshot-note.json, code:.agent/fanout-dispatcher.json"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/realagent/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 会话 与 压测 的取值",
+      "R": "code:.notebook/extensions/realagent/throughput-bundle.json"
+    },
+    {
+      "name": "snapshot-note.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/table-editor/",
+      "layer": "F",
+      "module": "C",
+      "F": "缓存 的声明式配置，定义 构建",
+      "R": "code:.notebook/extensions/table-editor/rollback-validator.js"
+    },
+    {
+      "name": "rollback-validator.js",
+      "dir": "C:/projects/atlas/.notebook/extensions/table-editor/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 路由 并暴露 巡检 接口",
+      "R": "code:.notebook/extensions/table-editor/throughput-bundle.json, code:.notebook/extensions/table-editor/threshold-theme.css"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/table-editor/",
+      "layer": "F",
+      "module": "E",
+      "F": "模板 的声明式配置，定义 验收",
+      "R": "code:.notebook/extensions/table-editor/rollback-validator.js, code:.notebook/extensions/table-editor/snapshot-note.json"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/table-editor/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 任务 与 压测 的取值",
+      "R": "code:.notebook/extensions/table-editor/rollback-validator.js"
+    },
+    {
+      "name": "rollback-validator.js",
+      "dir": "C:/projects/atlas/.notebook/extensions/templater/",
+      "layer": "E",
+      "module": "W",
+      "F": "词表 的入口，负责 构建 的初始化与分发",
+      "R": "code:.notebook/extensions/templater/throughput-bundle.json, code:.notebook/extensions/templater/threshold-theme.css"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/extensions/templater/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 基线 与 巡检 的取值",
+      "R": "code:.notebook/extensions/templater/rollback-validator.js, code:.notebook/extensions/templater/threshold-theme.css"
+    },
+    {
+      "name": "threshold-theme.css",
+      "dir": "C:/projects/atlas/.notebook/extensions/templater/",
+      "layer": "F",
+      "module": "E",
+      "F": "快照 的声明式配置，定义 验收",
+      "R": "code:.notebook/extensions/templater/rollback-validator.js"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/themes/blue-topaz/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 通道 与 压测 的取值",
+      "R": "code:.notebook/handoff-caption.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.notebook/themes/minimal/",
+      "layer": "F",
+      "module": "U",
+      "F": "队列 的声明式配置，定义 构建",
+      "R": "code:.notebook/themes/minimal/compaction-adapter.css"
+    },
+    {
+      "name": "compaction-adapter.css",
+      "dir": "C:/projects/atlas/.notebook/themes/minimal/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 校验 与 巡检 的取值",
+      "R": "code:.notebook/themes/minimal/throughput-bundle.json"
+    },
+    {
+      "name": "warmup-renderer.py",
+      "dir": "C:/projects/atlas/.vendor-pkg/",
+      "layer": "X",
+      "module": "A",
+      "F": "渲染 的开发工具，辅助 验收",
+      "R": "code:.vendor-pkg/backpressure-layout.py"
+    },
+    {
+      "name": "backpressure-layout.py",
+      "dir": "C:/projects/atlas/.vendor-pkg/",
+      "layer": "K",
+      "module": "A",
+      "F": "导出 算法实现，输出 压测 并缓存中间量",
+      "R": "code:.vendor-pkg/warmup-renderer.py"
+    },
+    {
+      "name": "warmup-import.md",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 索引 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "throttling-outline",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/",
+      "layer": "S",
+      "module": "Z",
+      "F": "配置 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:.vendor-pkg/timekit/warmup-import.md"
+    },
+    {
+      "name": "coverage-outline",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 会话 的规范与约定，供 验收 场景查阅",
+      "R": "code:.vendor-pkg/timekit/throttling-outline"
+    },
+    {
+      "name": "backpressure-store.md",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/",
+      "layer": "S",
+      "module": "E",
+      "F": "缓存 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:.vendor-pkg/timekit/throughput-bundle.json"
+    },
+    {
+      "name": "throughput-bundle.json",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/",
+      "layer": "F",
+      "module": "E",
+      "F": "路由 的声明式配置，定义 构建",
+      "R": "code:.vendor-pkg/timekit/backpressure-store.md"
+    },
+    {
+      "name": "quota-indexer.css",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/assets/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 模板 与 巡检 的取值",
+      "R": "code:.vendor-pkg/timekit/assets/sampling-tag.js"
+    },
+    {
+      "name": "sampling-tag.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/assets/",
+      "layer": "E",
+      "module": "C",
+      "F": "任务 的入口，负责 验收 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/assets/quota-indexer.css"
+    },
+    {
+      "name": "backpressure-transcript.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/extensions/",
+      "layer": "E",
+      "module": "M",
+      "F": "程序入口，装配 词表 并暴露 压测 接口",
+      "R": "code:.vendor-pkg/timekit/lib/backpressure-transcript.js, code:.vendor-pkg/timekit/lib/retention-scanner.js"
+    },
+    {
+      "name": "warmup-timeline.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "L",
+      "module": "D",
+      "F": "基线 的公共库实现，被 构建 复用",
+      "R": "-"
+    },
+    {
+      "name": "fanout-panel.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "L",
+      "module": "S",
+      "F": "SDK 模块：封装 快照，供 巡检 调用",
+      "R": "code:.vendor-pkg/timekit/lib/retention-scanner.js"
+    },
+    {
+      "name": "retention-scanner.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "P",
+      "module": "D",
+      "F": "通道 的持久化读写，落盘为 验收",
+      "R": "code:.vendor-pkg/timekit/lib/fanout-panel.js, code:.vendor-pkg/timekit/lib/tracing-router.js"
+    },
+    {
+      "name": "threshold-cache.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "D",
+      "module": "W",
+      "F": "业务规则层，约束 队列 在 压测 下的行为",
+      "R": "code:.vendor-pkg/timekit/lib/retention-scanner.js"
+    },
+    {
+      "name": "threshold-registry.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "O",
+      "module": "O",
+      "F": "校验 的运维脚本，用于 构建",
+      "R": "-"
+    },
+    {
+      "name": "coverage-digest.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "S",
+      "module": "U",
+      "F": "渲染 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:.vendor-pkg/timekit/lib/consistency-transcript.js"
+    },
+    {
+      "name": "consistency-transcript.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "L",
+      "module": "D",
+      "F": "导出 的公共库实现，被 验收 复用",
+      "R": "code:.vendor-pkg/timekit/lib/coverage-digest.js"
+    },
+    {
+      "name": "backpressure-transcript.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "D",
+      "module": "M",
+      "F": "业务规则层，约束 索引 在 压测 下的行为",
+      "R": "code:.vendor-pkg/timekit/lib/consistency-transcript.js, code:.vendor-pkg/timekit/lib/retention-scanner.js"
+    },
+    {
+      "name": "snapshot-session.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "E",
+      "module": "U",
+      "F": "配置 的入口，负责 构建 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/routes/quota-filter.js"
+    },
+    {
+      "name": "rollout-scheduler.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "D",
+      "module": "A",
+      "F": "业务规则层，约束 会话 在 巡检 下的行为",
+      "R": "code:.vendor-pkg/timekit/lib/threshold-cache.js"
+    },
+    {
+      "name": "compaction-graph.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "P",
+      "module": "D",
+      "F": "缓存 的持久化读写，落盘为 验收",
+      "R": "code:.vendor-pkg/timekit/lib/retention-scanner.js"
+    },
+    {
+      "name": "threshold-worker.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "A",
+      "module": "W",
+      "F": "编排层：按序驱动 路由 与 压测",
+      "R": "code:.vendor-pkg/timekit/lib/coverage-watcher.js, code:.vendor-pkg/timekit/lib/idempotency-dispatcher.js"
+    },
+    {
+      "name": "coverage-watcher.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "D",
+      "module": "W",
+      "F": "模板 的领域逻辑，处理 构建 的流转",
+      "R": "code:.vendor-pkg/timekit/lib/tracing-router.js"
+    },
+    {
+      "name": "rollout-router.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "K",
+      "module": "U",
+      "F": "任务 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:.vendor-pkg/timekit/lib/tracing-router.js"
+    },
+    {
+      "name": "tracing-router.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "K",
+      "module": "W",
+      "F": "词表 的计算实现，按 验收 推导结果",
+      "R": "code:.vendor-pkg/timekit/lib/rollout-router.js"
+    },
+    {
+      "name": "idempotency-dispatcher.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "I",
+      "module": "I",
+      "F": "适配层：把 基线 转成 压测 可用的形态",
+      "R": "-"
+    },
+    {
+      "name": "threshold-layout.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/",
+      "layer": "I",
+      "module": "U",
+      "F": "快照 的集成适配，对接 构建",
+      "R": "code:.vendor-pkg/timekit/lib/warmup-timeline.js"
+    },
+    {
+      "name": "coverage-search.css",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/pretty-select/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 通道 与 巡检 的取值",
+      "R": "code:.vendor-pkg/timekit/lib/pretty-select/backlog-adapter.js"
+    },
+    {
+      "name": "backlog-adapter.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/pretty-select/",
+      "layer": "E",
+      "module": "U",
+      "F": "队列 的入口，负责 验收 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/lib/pretty-select/coverage-search.css"
+    },
+    {
+      "name": "latency-metric.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/core/",
+      "layer": "A",
+      "module": "M",
+      "F": "编排层：按序驱动 校验 与 压测",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/backpressure-layout.js, code:.vendor-pkg/timekit/lib/feedback/core/idempotency-profile.js"
+    },
+    {
+      "name": "threshold-sync.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/core/",
+      "layer": "I",
+      "module": "O",
+      "F": "渲染 的集成适配，对接 构建",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js"
+    },
+    {
+      "name": "latency-queue.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/core/",
+      "layer": "D",
+      "module": "M",
+      "F": "业务规则层，约束 导出 在 巡检 下的行为",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js"
+    },
+    {
+      "name": "handoff-channel.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/core/",
+      "layer": "S",
+      "module": "M",
+      "F": "记录 索引 的规范与约定，供 验收 场景查阅",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js"
+    },
+    {
+      "name": "idempotency-profile.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/core/",
+      "layer": "D",
+      "module": "D",
+      "F": "业务规则层，约束 配置 在 压测 下的行为",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js"
+    },
+    {
+      "name": "backpressure-layout.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/",
+      "layer": "E",
+      "module": "E",
+      "F": "会话 的入口，负责 构建 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js"
+    },
+    {
+      "name": "consistency-layout.json",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/",
+      "layer": "F",
+      "module": "E",
+      "F": "配置文件：声明 缓存 与 巡检 的取值",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/backpressure-layout.js"
+    },
+    {
+      "name": "consistency-export.css",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/ui/",
+      "layer": "F",
+      "module": "U",
+      "F": "路由 的声明式配置，定义 验收",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/ui/eviction-loader.js"
+    },
+    {
+      "name": "eviction-loader.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/ui/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 模板 并暴露 压测 接口",
+      "R": "code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js, code:.vendor-pkg/timekit/lib/feedback/ui/consistency-export.css"
+    },
+    {
+      "name": "latency-metric.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/model-config/core/",
+      "layer": "A",
+      "module": "C",
+      "F": "任务 的应用编排，调度 构建",
+      "R": "code:.vendor-pkg/timekit/lib/model-config/backpressure-layout.js"
+    },
+    {
+      "name": "drift-adapter.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/model-config/core/",
+      "layer": "L",
+      "module": "S",
+      "F": "SDK 模块：封装 词表，供 巡检 调用",
+      "R": "code:.vendor-pkg/timekit/lib/model-config/core/consistency-worker.js"
+    },
+    {
+      "name": "consistency-worker.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/model-config/core/",
+      "layer": "L",
+      "module": "C",
+      "F": "基线 的公共库实现，被 验收 复用",
+      "R": "code:.vendor-pkg/timekit/lib/model-config/core/drift-adapter.js"
+    },
+    {
+      "name": "backpressure-layout.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/model-config/",
+      "layer": "E",
+      "module": "C",
+      "F": "程序入口，装配 快照 并暴露 压测 接口",
+      "R": "code:.vendor-pkg/timekit/lib/model-config/core/latency-metric.js"
+    },
+    {
+      "name": "sampling-formatter.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/core/",
+      "layer": "I",
+      "module": "V",
+      "F": "通道 的集成适配，对接 构建",
+      "R": "code:.vendor-pkg/timekit/lib/update-checker/core/throughput-profile.js"
+    },
+    {
+      "name": "throughput-profile.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/core/",
+      "layer": "K",
+      "module": "V",
+      "F": "队列 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:.vendor-pkg/timekit/lib/update-checker/core/sampling-formatter.js"
+    },
+    {
+      "name": "backpressure-layout.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/",
+      "layer": "E",
+      "module": "V",
+      "F": "校验 的入口，负责 验收 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/lib/update-checker/core/sampling-formatter.js"
+    },
+    {
+      "name": "consistency-layout.json",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/",
+      "layer": "F",
+      "module": "V",
+      "F": "配置文件：声明 渲染 与 压测 的取值",
+      "R": "code:.vendor-pkg/timekit/lib/update-checker/backpressure-layout.js"
+    },
+    {
+      "name": "snapshot-panel.css",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/ui/",
+      "layer": "F",
+      "module": "U",
+      "F": "导出 的声明式配置，定义 构建",
+      "R": "code:.vendor-pkg/timekit/lib/update-checker/ui/latency-layout.js"
+    },
+    {
+      "name": "latency-layout.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/ui/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 索引 并暴露 巡检 接口",
+      "R": "code:.vendor-pkg/timekit/lib/update-checker/core/sampling-formatter.js"
+    },
+    {
+      "name": "quota-filter.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/routes/",
+      "layer": "E",
+      "module": "U",
+      "F": "配置 的入口，负责 验收 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/lib/snapshot-session.js, code:.vendor-pkg/timekit/lib/retention-scanner.js"
+    },
+    {
+      "name": "replication-scheduler.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/tools/",
+      "layer": "E",
+      "module": "W",
+      "F": "程序入口，装配 会话 并暴露 压测 接口",
+      "R": "code:.vendor-pkg/timekit/lib/compaction-graph.js"
+    },
+    {
+      "name": "consistency-import.js",
+      "dir": "C:/projects/atlas/.vendor-pkg/timekit/tools/",
+      "layer": "E",
+      "module": "W",
+      "F": "缓存 的入口，负责 构建 的初始化与分发",
+      "R": "code:.vendor-pkg/timekit/lib/compaction-graph.js"
+    },
+    {
+      "name": "snapshot-metric.js",
+      "dir": "C:/projects/atlas/project/cards/math-survey/",
+      "layer": "X",
+      "module": "A",
+      "F": "工具脚本：批量处理 路由，输出 巡检",
+      "R": "-"
+    },
+    {
+      "name": "rollback-channel.html",
+      "dir": "C:/projects/atlas/projects/cards/",
+      "layer": "E",
+      "module": "U",
+      "F": "模板 的入口，负责 验收 的初始化与分发",
+      "R": "-"
+    },
+    {
+      "name": "compaction-loader.html",
+      "dir": "C:/projects/atlas/projects/cards/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 任务 并暴露 压测 接口",
+      "R": "code:projects/cards/rollback-channel.html"
+    },
+    {
+      "name": "baseline-adapter.txt",
+      "dir": "C:/projects/atlas/projects/drive-archive/",
+      "layer": "O",
+      "module": "V",
+      "F": "词表 的运维脚本，用于 构建",
+      "R": "-"
+    },
+    {
+      "name": "drift-store.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/",
+      "layer": "S",
+      "module": "E",
+      "F": "基线 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/drive-archive/extracted/references/idempotency-bundle.md"
+    },
+    {
+      "name": "rollback-bundle.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 快照 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/drive-archive/extracted/references/partition-timeline.md"
+    },
+    {
+      "name": "idempotency-bundle.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "I",
+      "F": "通道 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/drive-archive/extracted/drift-store.md"
+    },
+    {
+      "name": "throttling-search.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "N",
+      "F": "记录 队列 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/drive-archive/extracted/references/replication-router.md"
+    },
+    {
+      "name": "tracing-transcript.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "D",
+      "F": "校验 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/drive-archive/extracted/references/throttling-search.md"
+    },
+    {
+      "name": "threshold-graph.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "U",
+      "F": "记录 渲染 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/drive-archive/extracted/references/throttling-search.md"
+    },
+    {
+      "name": "baseline-adapter.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "N",
+      "F": "导出 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/drive-archive/extracted/references/idempotency-timeline.md"
+    },
+    {
+      "name": "partition-timeline.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "D",
+      "F": "记录 索引 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/drive-archive/extracted/references/throttling-search.md"
+    },
+    {
+      "name": "idempotency-timeline.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "S",
+      "F": "配置 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/drive-archive/extracted/references/baseline-adapter.md"
+    },
+    {
+      "name": "replication-router.md",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/references/",
+      "layer": "S",
+      "module": "U",
+      "F": "记录 会话 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/drive-archive/extracted/references/throttling-search.md"
+    },
+    {
+      "name": "rollout-config.cjs",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/scripts/",
+      "layer": "K",
+      "module": "P",
+      "F": "缓存 算法实现，输出 压测 并缓存中间量",
+      "R": "code:projects/drive-archive/extracted/scripts/fanout-watcher.cjs"
+    },
+    {
+      "name": "replication-manifest.sh",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/scripts/",
+      "layer": "O",
+      "module": "V",
+      "F": "路由 的运维脚本，用于 构建",
+      "R": "code:projects/drive-archive/extracted/scripts/fanout-watcher.cjs"
+    },
+    {
+      "name": "fanout-watcher.cjs",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/scripts/",
+      "layer": "E",
+      "module": "I",
+      "F": "程序入口，装配 模板 并暴露 巡检 接口",
+      "R": "code:projects/drive-archive/extracted/scripts/rollout-config.cjs, code:projects/drive-archive/extracted/drift-store.md"
+    },
+    {
+      "name": "partition-queue.sh",
+      "dir": "C:/projects/atlas/projects/drive-archive/extracted/scripts/",
+      "layer": "O",
+      "module": "V",
+      "F": "任务 的运维脚本，用于 验收",
+      "R": "code:projects/drive-archive/extracted/scripts/fanout-watcher.cjs"
+    },
+    {
+      "name": "backpressure-store.md",
+      "dir": "C:/projects/atlas/projects/showcase/",
+      "layer": "S",
+      "module": "Q",
+      "F": "词表 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/showcase/throttling-collector.html"
+    },
+    {
+      "name": "throttling-collector.html",
+      "dir": "C:/projects/atlas/projects/showcase/",
+      "layer": "E",
+      "module": "U",
+      "F": "基线 的入口，负责 构建 的初始化与分发",
+      "R": "code:projects/showcase/backpressure-store.md"
+    },
+    {
+      "name": "2026-08-07-baseline-scheduler.md",
+      "dir": "C:/projects/atlas/projects/worker-b-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "快照 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-08-retention-router.md",
+      "dir": "C:/projects/atlas/projects/worker-b-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 通道 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-b-activity/2026-08-07-baseline-scheduler.md"
+    },
+    {
+      "name": "2026-08-08-warmup-note.md",
+      "dir": "C:/projects/atlas/projects/worker-b-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "队列 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-b-activity/2026-08-08-retention-router.md"
+    },
+    {
+      "name": "sampling-buffer.md",
+      "dir": "C:/projects/atlas/projects/worker-b-patrol/",
+      "layer": "P",
+      "module": "O",
+      "F": "校验 的持久化读写，落盘为 构建",
+      "R": "code:projects/worker-b-patrol/sharding-config.md"
+    },
+    {
+      "name": "sharding-config.md",
+      "dir": "C:/projects/atlas/projects/worker-b-patrol/",
+      "layer": "S",
+      "module": "S",
+      "F": "渲染 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-b-patrol/sampling-buffer.md"
+    },
+    {
+      "name": "threshold-buffer.py",
+      "dir": "C:/projects/atlas/projects/tolerance-chart/",
+      "layer": "X",
+      "module": "Z",
+      "F": "导出 的开发工具，辅助 验收",
+      "R": "-"
+    },
+    {
+      "name": "checkpoint-panel.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "索引 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "throttling-report.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 配置 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "backlog-digest.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "会话 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "latency-session.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 缓存 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "idempotency-adapter.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "路由 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "threshold-indexer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 模板 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "sharding-indexer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "任务 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "backpressure-filter.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 词表 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "drift-formatter.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "基线 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "warmup-scheduler.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 快照 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "tracing-indexer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "通道 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "baseline-indexer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 队列 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "compaction-buffer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "校验 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "rollback-manifest.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 渲染 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/journal/baseline-indexer.md"
+    },
+    {
+      "name": "baseline-session.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "导出 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "backlog-search.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 索引 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "rollback-theme.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "配置 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "latency-router.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 会话 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "backpressure-collector.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "缓存 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "rollback-validator.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 路由 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "sharding-theme.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "模板 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "replication-timeline.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 任务 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "coverage-outline.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "词表 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "checkpoint-scanner.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 基线 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "sharding-digest.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "快照 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/journal/checkpoint-scanner.md"
+    },
+    {
+      "name": "sharding-channel.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 通道 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "partition-channel.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "队列 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "throughput-parser.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 校验 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "coverage-transcript.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "渲染 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "consistency-resolver.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 导出 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "latency-formatter.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "索引 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "fanout-layout.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 配置 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "latency-watcher.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "会话 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "fanout-scanner.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 缓存 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "sharding-report.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "路由 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "rollout-config.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 模板 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "partition-scanner.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "任务 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "consistency-entry.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 词表 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "rollback-indexer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "基线 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "compaction-renderer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 快照 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "checkpoint-watcher.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "通道 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "throttling-adapter.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 队列 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "compaction-indexer.md",
+      "dir": "C:/projects/atlas/projects/journal/",
+      "layer": "S",
+      "module": "Z",
+      "F": "校验 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-08-idempotency-export.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 渲染 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-08-handoff-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "导出 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-08-08-idempotency-export.md"
+    },
+    {
+      "name": "2026-08-08-tracing-manifest.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 索引 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-08-idempotency-registry.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "配置 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-partition-panel.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 会话 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-handoff-renderer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "缓存 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-snapshot-caption.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 路由 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-handoff-parser.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "模板 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-eviction-config.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 任务 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-throughput-queue.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "词表 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-coverage-renderer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 基线 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-snapshot-scheduler.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "快照 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-backlog-note.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 通道 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-09-sampling-bundle.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "队列 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-08-09-backlog-note.md"
+    },
+    {
+      "name": "2026-08-09-tracing-digest.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 校验 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-handoff-caption.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "渲染 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-tracing-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 导出 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-sharding-config.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "索引 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-eviction-search.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 配置 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-rollout-scanner.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "会话 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-sampling-worker.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 缓存 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-replication-search.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "路由 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-coverage-formatter.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 模板 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-baseline-indexer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "任务 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-compaction-graph.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 词表 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-throttling-buffer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "基线 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-handoff-watcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 快照 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-sampling-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "通道 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-tracing-profile.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 队列 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-quota-store.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "校验 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-idempotency-cache.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 渲染 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-warmup-watcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "导出 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-backpressure-timeline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 索引 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-backlog-profile.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "配置 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-latency-buffer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 会话 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-latency-profile.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "缓存 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-10-throttling-preview.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 路由 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-snapshot-manifest.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "模板 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-warmup-resolver.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 任务 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-snapshot-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "词表 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-coverage-metric.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 基线 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-handoff-dispatcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "快照 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-baseline-sync.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 通道 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-drift-watcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "队列 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-warmup-formatter.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 校验 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-drift-loader.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "渲染 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-checkpoint-transcript.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 导出 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-threshold-config.py",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "T",
+      "module": "A",
+      "F": "回归脚本：覆盖 索引 的 巡检 分支",
+      "R": "code:projects/worker-a-activity/2026-08-11-sharding-watcher.md"
+    },
+    {
+      "name": "2026-08-11-sharding-watcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 配置 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-08-11-threshold-config.py"
+    },
+    {
+      "name": "2026-08-11-retention-loader.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "会话 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-retention-queue.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 缓存 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-compaction-layout.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "路由 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-retention-transcript.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 模板 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-throttling-resolver.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "任务 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-coverage-search.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 词表 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-partition-worker.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "基线 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-snapshot-queue.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 快照 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-partition-loader.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "通道 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-partition-panel.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 队列 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-snapshot-loader.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "校验 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-baseline-parser.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 渲染 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-11-compaction-dispatcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "导出 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-08-11-baseline-parser.md"
+    },
+    {
+      "name": "2026-08-11-checkpoint-worker.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 索引 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-08-11-compaction-dispatcher.md"
+    },
+    {
+      "name": "2026-08-14-rollout-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "配置 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-tracing-queue.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 会话 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-sharding-store.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "缓存 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-latency-outline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 路由 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-eviction-scheduler.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "模板 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-rollback-graph.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 任务 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-rollback-bundle.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "词表 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-throttling-caption.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 基线 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-retention-sync.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "快照 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-consistency-digest.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 通道 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-14-tracing-theme.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "队列 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-15-tracing-outline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 校验 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-15-warmup-session.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "渲染 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-15-baseline-watcher.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 导出 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-16-consistency-router.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "索引 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-16-compaction-graph.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 配置 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-16-fanout-queue.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "会话 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-17-consistency-channel.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 缓存 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-08-27-quota-config.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "路由 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-10-rollback-config.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 模板 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-11-warmup-transcript.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "任务 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:partition-profile.md"
+    },
+    {
+      "name": "2026-09-11-eviction-worker.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 词表 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-11-rollout-indexer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "基线 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-12-fanout-entry.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 快照 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/showcase/backpressure-store.md"
+    },
+    {
+      "name": "2026-09-13-baseline-import.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "通道 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-08-11-partition-panel.md"
+    },
+    {
+      "name": "2026-09-13-threshold-collector.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 队列 的规范与约定，供 验收 场景查阅",
+      "R": "code:skills/disk-cleanup/drift-store.md"
+    },
+    {
+      "name": "2026-09-13-sampling-loader.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "校验 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "name": "2026-09-14-backpressure-timeline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 渲染 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-13-sampling-loader.md, code:projects/worker-a-activity/2026-09-14-snapshot-stream.md, code:projects/worker-a-activity/2026-09-14-throttling-caption.md"
+    },
+    {
+      "name": "2026-09-14-snapshot-stream.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "导出 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "name": "2026-09-14-throttling-caption.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 索引 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "name": "2026-09-15-backlog-worker.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "配置 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-15-eviction-tag.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 会话 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-22-rollout-tag.md"
+    },
+    {
+      "name": "2026-09-15-compaction-worker.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "缓存 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-15-tracing-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 路由 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md, code:projects/worker-a-activity/2026-09-15-backpressure-report.md"
+    },
+    {
+      "name": "2026-09-15-backpressure-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "模板 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-15-tracing-report.md"
+    },
+    {
+      "name": "2026-09-16-baseline-renderer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 任务 的规范与约定，供 构建 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-16-throttling-import.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "词表 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-17-eviction-store.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 基线 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-17-quota-layout.md"
+    },
+    {
+      "name": "2026-09-17-quota-import.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "快照 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-17-quota-layout.md"
+    },
+    {
+      "name": "2026-09-17-quota-layout.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 通道 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-17-eviction-store.md, code:projects/worker-a-activity/2026-09-18-compaction-loader.md"
+    },
+    {
+      "name": "2026-09-17-eviction-theme.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "队列 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-18-retention-stream.md"
+    },
+    {
+      "name": "2026-09-18-checkpoint-export.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 校验 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-18-compaction-loader.md"
+    },
+    {
+      "name": "2026-09-18-compaction-loader.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "渲染 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-17-quota-layout.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md"
+    },
+    {
+      "name": "2026-09-18-retention-sync.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 导出 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-18-retention-stream.md"
+    },
+    {
+      "name": "2026-09-18-retention-stream.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "索引 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-17-eviction-theme.md, code:projects/worker-a-activity/2026-09-18-retention-sync.md"
+    },
+    {
+      "name": "2026-09-21-consistency-stream.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 配置 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md"
+    },
+    {
+      "name": "2026-09-21-rollback-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "会话 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-22-backlog-outline.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md"
+    },
+    {
+      "name": "2026-09-22-rollout-tag.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 缓存 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-15-eviction-tag.md"
+    },
+    {
+      "name": "2026-09-22-snapshot-scheduler.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "路由 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-30-warmup-registry.md"
+    },
+    {
+      "name": "2026-09-22-drift-timeline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 模板 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-22-baseline-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md"
+    },
+    {
+      "name": "2026-09-22-baseline-report.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "任务 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md"
+    },
+    {
+      "name": "2026-09-22-backlog-outline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 词表 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md"
+    },
+    {
+      "name": "2026-09-25-threshold-export.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "基线 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "2026-09-25-snapshot-store.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 快照 的规范与约定，供 验收 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-25-compaction-theme.md"
+    },
+    {
+      "name": "2026-09-25-compaction-theme.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "通道 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-25-snapshot-store.md"
+    },
+    {
+      "name": "2026-09-28-sampling-queue.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 队列 的规范与约定，供 构建 场景查阅",
+      "R": "code:projects/worker-a-activity/2026-09-18-compaction-loader.md, code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-22-baseline-report.md"
+    },
+    {
+      "name": "2026-09-30-warmup-registry.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "校验 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-22-snapshot-scheduler.md"
+    },
+    {
+      "name": "2026-10-01-partition-resolver.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 渲染 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "2026-10-03-throttling-timeline.md",
+      "dir": "C:/projects/atlas/projects/worker-a-activity/",
+      "layer": "S",
+      "module": "A",
+      "F": "导出 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:projects/worker-a-activity/2026-09-22-snapshot-scheduler.md"
+    },
+    {
+      "name": "sampling-buffer.md",
+      "dir": "C:/projects/atlas/projects/worker-c-patrol/",
+      "layer": "O",
+      "module": "O",
+      "F": "索引 的运维脚本，用于 构建",
+      "R": "code:projects/worker-a-patrol/rollout-bundle.ps1, code:projects/worker-a-patrol/compaction-resolver.ps1, code:projects/worker-a-patrol/tracing-loader.ps1, code:projects/worker-a-activity/2026-09-10-rollback-config.md"
+    },
+    {
+      "name": "rollout-bundle.ps1",
+      "dir": "C:/projects/atlas/projects/worker-a-patrol/",
+      "layer": "X",
+      "module": "O",
+      "F": "工具脚本：批量处理 配置，输出 巡检",
+      "R": "code:projects/worker-a-activity/2026-09-10-rollback-config.md, code:projects/worker-c-patrol/sampling-buffer.md"
+    },
+    {
+      "name": "sampling-buffer.md",
+      "dir": "C:/projects/atlas/projects/worker-a-patrol/",
+      "layer": "O",
+      "module": "O",
+      "F": "会话 的运维脚本，用于 验收",
+      "R": "code:projects/worker-c-patrol/sampling-buffer.md"
+    },
+    {
+      "name": "tracing-loader.ps1",
+      "dir": "C:/projects/atlas/projects/worker-a-patrol/",
+      "layer": "X",
+      "module": "O",
+      "F": "工具脚本：批量处理 缓存，输出 压测",
+      "R": "code:projects/worker-c-patrol/sampling-buffer.md"
+    },
+    {
+      "name": "compaction-resolver.ps1",
+      "dir": "C:/projects/atlas/projects/worker-a-patrol/",
+      "layer": "X",
+      "module": "O",
+      "F": "路由 的开发工具，辅助 构建",
+      "R": "code:projects/worker-c-patrol/sampling-buffer.md"
+    },
+    {
+      "name": "backpressure-store.md",
+      "dir": "C:/projects/atlas/_avatars/",
+      "layer": "S",
+      "module": "Z",
+      "F": "模板 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:_avatars/handoff-stream.png, code:_avatars/snapshot-caption.png, code:_avatars/eviction-dispatcher.ico, code:_avatars/rollout-bundle.png"
+    },
+    {
+      "name": "threshold-stream.md",
+      "dir": "C:/projects/atlas/reference/ai-animation-refs/",
+      "layer": "S",
+      "module": "Z",
+      "F": "记录 任务 的规范与约定，供 验收 场景查阅",
+      "R": "code:reference/ai-animation-refs/coverage-bundle.md, code:reference/ai-animation-refs/coverage-preview.md"
+    },
+    {
+      "name": "coverage-preview.md",
+      "dir": "C:/projects/atlas/reference/ai-animation-refs/",
+      "layer": "S",
+      "module": "U",
+      "F": "词表 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:reference/ai-animation-refs/threshold-stream.md"
+    },
+    {
+      "name": "coverage-validator.md",
+      "dir": "C:/projects/atlas/reference/ai-animation-refs/",
+      "layer": "S",
+      "module": "U",
+      "F": "记录 基线 的规范与约定，供 构建 场景查阅",
+      "R": "code:reference/ai-animation-refs/threshold-stream.md"
+    },
+    {
+      "name": "coverage-bundle.md",
+      "dir": "C:/projects/atlas/reference/ai-animation-refs/",
+      "layer": "S",
+      "module": "U",
+      "F": "快照 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:reference/ai-animation-refs/threshold-stream.md"
+    },
+    {
+      "name": "snapshot-collector.md",
+      "dir": "C:/projects/atlas/reference/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 通道 的规范与约定，供 验收 场景查阅",
+      "R": "-"
+    },
+    {
+      "name": "drift-store.md",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/",
+      "layer": "S",
+      "module": "E",
+      "F": "队列 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:skills-draft/doc-audit-cards/references/drift-panel.md, code:skills-draft/doc-audit-cards/references/rollback-timeline.md, code:skills-draft/doc-audit-cards/references/idempotency-digest.md"
+    },
+    {
+      "name": "checkpoint-scanner.json",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/evals/",
+      "layer": "F",
+      "module": "Q",
+      "F": "校验 的声明式配置，定义 构建",
+      "R": "code:skills-draft/doc-audit-cards/drift-store.md"
+    },
+    {
+      "name": "backpressure-store.md",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/examples/",
+      "layer": "S",
+      "module": "Z",
+      "F": "渲染 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:skills-draft/doc-audit-cards/examples/drift-formatter.json"
+    },
+    {
+      "name": "drift-formatter.json",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/examples/",
+      "layer": "F",
+      "module": "E",
+      "F": "导出 的声明式配置，定义 验收",
+      "R": "code:skills-draft/doc-audit-cards/scripts/throughput-router.py"
+    },
+    {
+      "name": "drift-panel.md",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/references/",
+      "layer": "S",
+      "module": "E",
+      "F": "索引 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:skills-draft/doc-audit-cards/drift-store.md"
+    },
+    {
+      "name": "rollback-timeline.md",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/references/",
+      "layer": "S",
+      "module": "E",
+      "F": "记录 配置 的规范与约定，供 构建 场景查阅",
+      "R": "code:skills-draft/doc-audit-cards/scripts/drift-digest.py, code:skills-draft/doc-audit-cards/scripts/throughput-router.py"
+    },
+    {
+      "name": "idempotency-digest.md",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/references/",
+      "layer": "S",
+      "module": "E",
+      "F": "会话 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:skills-draft/doc-audit-cards/drift-store.md, code:skills-draft/doc-audit-cards/references/rollback-timeline.md"
+    },
+    {
+      "name": "throughput-router.py",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/scripts/",
+      "layer": "X",
+      "module": "Q",
+      "F": "缓存 的开发工具，辅助 验收",
+      "R": "code:skills-draft/doc-audit-cards/scripts/drift-digest.py, code:skills-draft/doc-audit-cards/examples/drift-formatter.json"
+    },
+    {
+      "name": "drift-digest.py",
+      "dir": "C:/projects/atlas/skills-draft/doc-audit-cards/scripts/",
+      "layer": "X",
+      "module": "Q",
+      "F": "工具脚本：批量处理 路由，输出 压测",
+      "R": "code:skills-draft/doc-audit-cards/scripts/throughput-router.py, code:skills-draft/doc-audit-cards/references/rollback-timeline.md"
+    },
+    {
+      "name": "drift-store.md",
+      "dir": "C:/projects/atlas/skills-draft/session-anchor/",
+      "layer": "S",
+      "module": "E",
+      "F": "记录 模板 的规范与约定，供 构建 场景查阅",
+      "R": "code:skills-draft/session-anchor/scripts/latency-tag.py, code:skills-draft/session-anchor/references/rollback-registry.md, code:skills-draft/session-anchor/references/retention-router.md"
+    },
+    {
+      "name": "sharding-note.md",
+      "dir": "C:/projects/atlas/skills-draft/session-anchor/examples/",
+      "layer": "S",
+      "module": "E",
+      "F": "任务 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:skills-draft/session-anchor/drift-store.md, code:skills-draft/session-anchor/examples/drift-sync.md"
+    },
+    {
+      "name": "drift-sync.md",
+      "dir": "C:/projects/atlas/skills-draft/session-anchor/examples/",
+      "layer": "S",
+      "module": "E",
+      "F": "记录 词表 的规范与约定，供 验收 场景查阅",
+      "R": "code:skills-draft/session-anchor/scripts/latency-tag.py, code:skills-draft/session-anchor/references/rollback-registry.md"
+    },
+    {
+      "name": "rollback-registry.md",
+      "dir": "C:/projects/atlas/skills-draft/session-anchor/references/",
+      "layer": "S",
+      "module": "Q",
+      "F": "基线 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:skills-draft/session-anchor/scripts/latency-tag.py, code:skills-draft/session-anchor/drift-store.md"
+    },
+    {
+      "name": "retention-router.md",
+      "dir": "C:/projects/atlas/skills-draft/session-anchor/references/",
+      "layer": "S",
+      "module": "E",
+      "F": "记录 快照 的规范与约定，供 构建 场景查阅",
+      "R": "code:skills-draft/session-anchor/drift-store.md"
+    },
+    {
+      "name": "latency-tag.py",
+      "dir": "C:/projects/atlas/skills-draft/session-anchor/scripts/",
+      "layer": "X",
+      "module": "Q",
+      "F": "工具脚本：批量处理 通道，输出 巡检",
+      "R": "code:skills-draft/session-anchor/references/rollback-registry.md, code:skills-draft/session-anchor/drift-store.md"
+    },
+    {
+      "name": "drift-store.md",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/",
+      "layer": "S",
+      "module": "E",
+      "F": "记录 队列 的规范与约定，供 验收 场景查阅",
+      "R": "code:skills/disk-cleanup/scripts/consistency-filter.ps1, code:skills/disk-cleanup/scripts/coverage-search.ps1, code:skills/disk-cleanup/scripts/coverage-theme.ps1, code:skills/disk-cleanup/references/latency-cache.md"
+    },
+    {
+      "name": "consistency-sync.md",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/examples/",
+      "layer": "S",
+      "module": "E",
+      "F": "校验 的说明文档，覆盖 压测 的用法与边界",
+      "R": "code:skills/disk-cleanup/drift-store.md"
+    },
+    {
+      "name": "latency-cache.md",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/references/",
+      "layer": "S",
+      "module": "S",
+      "F": "记录 渲染 的规范与约定，供 构建 场景查阅",
+      "R": "code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/coverage-sync.md"
+    },
+    {
+      "name": "coverage-sync.md",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/references/",
+      "layer": "S",
+      "module": "P",
+      "F": "导出 的说明文档，覆盖 巡检 的用法与边界",
+      "R": "code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/latency-cache.md"
+    },
+    {
+      "name": "snapshot-parser.md",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/references/",
+      "layer": "S",
+      "module": "O",
+      "F": "记录 索引 的规范与约定，供 验收 场景查阅",
+      "R": "code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/latency-cache.md"
+    },
+    {
+      "name": "coverage-search.ps1",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/scripts/",
+      "layer": "X",
+      "module": "O",
+      "F": "工具脚本：批量处理 配置，输出 压测",
+      "R": "code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/scripts/consistency-filter.ps1"
+    },
+    {
+      "name": "coverage-theme.ps1",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/scripts/",
+      "layer": "O",
+      "module": "R",
+      "F": "会话 的运维脚本，用于 构建",
+      "R": "code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/latency-cache.md"
+    },
+    {
+      "name": "consistency-filter.ps1",
+      "dir": "C:/projects/atlas/skills/disk-cleanup/scripts/",
+      "layer": "X",
+      "module": "O",
+      "F": "工具脚本：批量处理 缓存，输出 巡检",
+      "R": "code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/scripts/coverage-search.ps1"
+    },
+    {
+      "name": "2026-09-23-coverage-registry.md",
+      "dir": "C:/projects/atlas/weekly/",
+      "layer": "S",
+      "module": "A",
+      "F": "记录 路由 的规范与约定，供 验收 场景查阅",
+      "R": "code:reference/ai-animation-refs/threshold-stream.md, code:reference/ai-animation-refs/coverage-bundle.md"
+    },
+    {
+      "name": "2026-10-01-warmup-scanner.md",
+      "dir": "C:/projects/atlas/research/",
+      "layer": "S",
+      "module": "A",
+      "F": "模板 的说明文档，覆盖 压测 的用法与边界",
+      "R": "-"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/agent-methodology-index/",
+      "layer": "E",
+      "module": "U",
+      "F": "任务 的入口，负责 构建 的初始化与分发",
+      "R": "-"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/os-beta-feedback/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 词表 并暴露 巡检 接口",
+      "R": "-"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/canyon-note/",
+      "layer": "E",
+      "module": "U",
+      "F": "基线 的入口，负责 验收 的初始化与分发",
+      "R": "-"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/overview-card-2/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 快照 并暴露 压测 接口",
+      "R": "code:widgets/overview-card-2/assets/retention-preview.jpg"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/overview-card/",
+      "layer": "E",
+      "module": "U",
+      "F": "通道 的入口，负责 构建 的初始化与分发",
+      "R": "code:widgets/overview-card/assets/rollback-theme.jpg"
+    },
+    {
+      "name": "consistency-config.js",
+      "dir": "C:/projects/atlas/widgets/slides-deck/assets/",
+      "layer": "L",
+      "module": "U",
+      "F": "SDK 模块：封装 队列，供 巡检 调用",
+      "R": "code:widgets/slides-deck/tracing-metric.html"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/slides-deck/",
+      "layer": "E",
+      "module": "U",
+      "F": "校验 的入口，负责 验收 的初始化与分发",
+      "R": "code:widgets/slides-deck/assets/consistency-config.js"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/todo-list-2/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 渲染 并暴露 压测 接口",
+      "R": "-"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/todo-list/",
+      "layer": "E",
+      "module": "U",
+      "F": "导出 的入口，负责 构建 的初始化与分发",
+      "R": "-"
+    },
+    {
+      "name": "consistency-indexer.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/",
+      "layer": "K",
+      "module": "U",
+      "F": "索引 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/backpressure-layout.js, code:widgets/chess-duel-card/assets/throughput-collector.js"
+    },
+    {
+      "name": "rollback-sync.css",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置 的声明式配置，定义 验收",
+      "R": "code:widgets/chess-duel-card/tracing-metric.html"
+    },
+    {
+      "name": "throughput-collector.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 会话 并暴露 压测 接口",
+      "R": "code:widgets/chess-duel-card/assets/engine/backpressure-layout.js, code:widgets/chess-duel-card/assets/consistency-indexer.js"
+    },
+    {
+      "name": "sampling-channel.svg",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/",
+      "layer": "F",
+      "module": "U",
+      "F": "缓存 的声明式配置，定义 构建",
+      "R": "-"
+    },
+    {
+      "name": "compaction-queue.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/",
+      "layer": "K",
+      "module": "U",
+      "F": "路由 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/throughput-collector.js"
+    },
+    {
+      "name": "tracing-bundle.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "模板 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "throughput-stream.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "任务 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/backlog-channel.js"
+    },
+    {
+      "name": "fanout-validator.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "词表 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "tracing-queue.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "基线 算法实现，输出 巡检 并缓存中间量",
+      "R": "-"
+    },
+    {
+      "name": "baseline-theme.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "快照 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "replication-config.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "通道 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "retention-store.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "队列 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "handoff-bundle.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "校验 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "backpressure-layout.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "E",
+      "module": "U",
+      "F": "渲染 的入口，负责 验收 的初始化与分发",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/backlog-channel.js"
+    },
+    {
+      "name": "snapshot-parser.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "导出 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "tracing-search.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "索引 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/throughput-stream.js"
+    },
+    {
+      "name": "drift-panel.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "配置 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "backlog-channel.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "会话 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "drift-export.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "缓存 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "consistency-layout.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "路由 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "replication-export.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "模板 算法实现，输出 巡检 并缓存中间量",
+      "R": "-"
+    },
+    {
+      "name": "warmup-router.js",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "任务 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/fanout-validator.js"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/chess-duel-card/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 词表 并暴露 压测 接口",
+      "R": "code:widgets/chess-duel-card/assets/throughput-collector.js, code:widgets/chess-duel-card/assets/rollback-sync.css"
+    },
+    {
+      "name": "consistency-indexer.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/",
+      "layer": "K",
+      "module": "U",
+      "F": "基线 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/backpressure-layout.js, code:widgets/chess-replica-card/assets/throughput-collector.js"
+    },
+    {
+      "name": "rollback-sync.css",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 快照 与 巡检 的取值",
+      "R": "code:widgets/chess-replica-card/tracing-metric.html"
+    },
+    {
+      "name": "throughput-collector.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/",
+      "layer": "E",
+      "module": "U",
+      "F": "通道 的入口，负责 验收 的初始化与分发",
+      "R": "code:widgets/chess-replica-card/assets/engine/backpressure-layout.js, code:widgets/chess-replica-card/assets/consistency-indexer.js"
+    },
+    {
+      "name": "sampling-channel.svg",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/",
+      "layer": "F",
+      "module": "U",
+      "F": "配置文件：声明 队列 与 压测 的取值",
+      "R": "-"
+    },
+    {
+      "name": "compaction-queue.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/",
+      "layer": "K",
+      "module": "U",
+      "F": "校验 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/throughput-collector.js"
+    },
+    {
+      "name": "tracing-bundle.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "渲染 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "throughput-stream.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "导出 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/backlog-channel.js"
+    },
+    {
+      "name": "fanout-validator.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "索引 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "tracing-queue.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "配置 的计算实现，按 构建 推导结果",
+      "R": "-"
+    },
+    {
+      "name": "baseline-theme.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "会话 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "replication-config.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "缓存 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "retention-store.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "路由 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "handoff-bundle.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "模板 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "backpressure-layout.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 任务 并暴露 巡检 接口",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/backlog-channel.js"
+    },
+    {
+      "name": "snapshot-parser.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "词表 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "tracing-search.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "基线 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/throughput-stream.js"
+    },
+    {
+      "name": "drift-panel.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "快照 的计算实现，按 构建 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "backlog-channel.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "通道 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "drift-export.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "队列 的计算实现，按 验收 推导结果",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js"
+    },
+    {
+      "name": "consistency-layout.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "校验 算法实现，输出 压测 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js"
+    },
+    {
+      "name": "replication-export.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "渲染 的计算实现，按 构建 推导结果",
+      "R": "-"
+    },
+    {
+      "name": "warmup-router.js",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/assets/engine/",
+      "layer": "K",
+      "module": "U",
+      "F": "导出 算法实现，输出 巡检 并缓存中间量",
+      "R": "code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/fanout-validator.js"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/chess-replica-card/",
+      "layer": "E",
+      "module": "U",
+      "F": "索引 的入口，负责 验收 的初始化与分发",
+      "R": "code:widgets/chess-replica-card/assets/throughput-collector.js, code:widgets/chess-replica-card/assets/rollback-sync.css"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/security-tools-map/",
+      "layer": "E",
+      "module": "U",
+      "F": "程序入口，装配 配置 并暴露 压测 接口",
+      "R": "-"
+    },
+    {
+      "name": "tracing-metric.html",
+      "dir": "C:/projects/atlas/widgets/chess-rules-preview/",
+      "layer": "E",
+      "module": "U",
+      "F": "会话 的入口，负责 构建 的初始化与分发",
+      "R": "-"
+    }
+  ],
+  "edges": [
+    {
+      "from": "fanout-dispatcher.json",
+      "to": "replication-import.json"
+    },
+    {
+      "from": "rollback-adapter.json",
+      "to": "replication-import.json"
+    },
+    {
+      "from": "replication-import.json",
+      "to": "rollback-adapter.json"
+    },
+    {
+      "from": "compaction-timeline.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "compaction-timeline.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "compaction-timeline.json",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "throttling-import.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "snapshot-note.json",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "snapshot-note.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "snapshot-note.json",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "snapshot-note.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "compaction-bundle.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "snapshot-note.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "snapshot-note.json",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "snapshot-note.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "compaction-timeline.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "partition-parser.gitignore"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "retention-transcript.sh"
+    },
+    {
+      "from": "retention-transcript.sh",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "partition-parser.gitignore"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "throttling-import.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "snapshot-note.json",
+      "to": "replication-import.json"
+    },
+    {
+      "from": "snapshot-note.json",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "snapshot-note.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "fanout-dispatcher.json"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "snapshot-note.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "snapshot-note.json"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "rollback-validator.js",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "threshold-theme.css"
+    },
+    {
+      "from": "threshold-theme.css",
+      "to": "rollback-validator.js"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "handoff-caption.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "compaction-adapter.css"
+    },
+    {
+      "from": "compaction-adapter.css",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "warmup-renderer.py",
+      "to": "backpressure-layout.py"
+    },
+    {
+      "from": "backpressure-layout.py",
+      "to": "warmup-renderer.py"
+    },
+    {
+      "from": "throttling-outline",
+      "to": "warmup-import.md"
+    },
+    {
+      "from": "coverage-outline",
+      "to": "throttling-outline"
+    },
+    {
+      "from": "backpressure-store.md",
+      "to": "throughput-bundle.json"
+    },
+    {
+      "from": "throughput-bundle.json",
+      "to": "backpressure-store.md"
+    },
+    {
+      "from": "quota-indexer.css",
+      "to": "sampling-tag.js"
+    },
+    {
+      "from": "sampling-tag.js",
+      "to": "quota-indexer.css"
+    },
+    {
+      "from": "backpressure-transcript.js",
+      "to": "backpressure-transcript.js"
+    },
+    {
+      "from": "backpressure-transcript.js",
+      "to": "retention-scanner.js"
+    },
+    {
+      "from": "fanout-panel.js",
+      "to": "retention-scanner.js"
+    },
+    {
+      "from": "retention-scanner.js",
+      "to": "fanout-panel.js"
+    },
+    {
+      "from": "retention-scanner.js",
+      "to": "tracing-router.js"
+    },
+    {
+      "from": "threshold-cache.js",
+      "to": "retention-scanner.js"
+    },
+    {
+      "from": "coverage-digest.js",
+      "to": "consistency-transcript.js"
+    },
+    {
+      "from": "consistency-transcript.js",
+      "to": "coverage-digest.js"
+    },
+    {
+      "from": "backpressure-transcript.js",
+      "to": "consistency-transcript.js"
+    },
+    {
+      "from": "backpressure-transcript.js",
+      "to": "retention-scanner.js"
+    },
+    {
+      "from": "snapshot-session.js",
+      "to": "quota-filter.js"
+    },
+    {
+      "from": "rollout-scheduler.js",
+      "to": "threshold-cache.js"
+    },
+    {
+      "from": "compaction-graph.js",
+      "to": "retention-scanner.js"
+    },
+    {
+      "from": "threshold-worker.js",
+      "to": "coverage-watcher.js"
+    },
+    {
+      "from": "threshold-worker.js",
+      "to": "idempotency-dispatcher.js"
+    },
+    {
+      "from": "coverage-watcher.js",
+      "to": "tracing-router.js"
+    },
+    {
+      "from": "rollout-router.js",
+      "to": "tracing-router.js"
+    },
+    {
+      "from": "tracing-router.js",
+      "to": "rollout-router.js"
+    },
+    {
+      "from": "threshold-layout.js",
+      "to": "warmup-timeline.js"
+    },
+    {
+      "from": "coverage-search.css",
+      "to": "backlog-adapter.js"
+    },
+    {
+      "from": "backlog-adapter.js",
+      "to": "coverage-search.css"
+    },
+    {
+      "from": "latency-metric.js",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "latency-metric.js",
+      "to": "idempotency-profile.js"
+    },
+    {
+      "from": "threshold-sync.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "latency-queue.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "handoff-channel.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "idempotency-profile.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "consistency-layout.json",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "consistency-export.css",
+      "to": "eviction-loader.js"
+    },
+    {
+      "from": "eviction-loader.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "eviction-loader.js",
+      "to": "consistency-export.css"
+    },
+    {
+      "from": "latency-metric.js",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "drift-adapter.js",
+      "to": "consistency-worker.js"
+    },
+    {
+      "from": "consistency-worker.js",
+      "to": "drift-adapter.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "latency-metric.js"
+    },
+    {
+      "from": "sampling-formatter.js",
+      "to": "throughput-profile.js"
+    },
+    {
+      "from": "throughput-profile.js",
+      "to": "sampling-formatter.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "sampling-formatter.js"
+    },
+    {
+      "from": "consistency-layout.json",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "snapshot-panel.css",
+      "to": "latency-layout.js"
+    },
+    {
+      "from": "latency-layout.js",
+      "to": "sampling-formatter.js"
+    },
+    {
+      "from": "quota-filter.js",
+      "to": "snapshot-session.js"
+    },
+    {
+      "from": "quota-filter.js",
+      "to": "retention-scanner.js"
+    },
+    {
+      "from": "replication-scheduler.js",
+      "to": "compaction-graph.js"
+    },
+    {
+      "from": "consistency-import.js",
+      "to": "compaction-graph.js"
+    },
+    {
+      "from": "compaction-loader.html",
+      "to": "rollback-channel.html"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "idempotency-bundle.md"
+    },
+    {
+      "from": "rollback-bundle.md",
+      "to": "partition-timeline.md"
+    },
+    {
+      "from": "idempotency-bundle.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "throttling-search.md",
+      "to": "replication-router.md"
+    },
+    {
+      "from": "tracing-transcript.md",
+      "to": "throttling-search.md"
+    },
+    {
+      "from": "threshold-graph.md",
+      "to": "throttling-search.md"
+    },
+    {
+      "from": "baseline-adapter.md",
+      "to": "idempotency-timeline.md"
+    },
+    {
+      "from": "partition-timeline.md",
+      "to": "throttling-search.md"
+    },
+    {
+      "from": "idempotency-timeline.md",
+      "to": "baseline-adapter.md"
+    },
+    {
+      "from": "replication-router.md",
+      "to": "throttling-search.md"
+    },
+    {
+      "from": "rollout-config.cjs",
+      "to": "fanout-watcher.cjs"
+    },
+    {
+      "from": "replication-manifest.sh",
+      "to": "fanout-watcher.cjs"
+    },
+    {
+      "from": "fanout-watcher.cjs",
+      "to": "rollout-config.cjs"
+    },
+    {
+      "from": "fanout-watcher.cjs",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "partition-queue.sh",
+      "to": "fanout-watcher.cjs"
+    },
+    {
+      "from": "backpressure-store.md",
+      "to": "throttling-collector.html"
+    },
+    {
+      "from": "throttling-collector.html",
+      "to": "backpressure-store.md"
+    },
+    {
+      "from": "2026-08-08-retention-router.md",
+      "to": "2026-08-07-baseline-scheduler.md"
+    },
+    {
+      "from": "2026-08-08-warmup-note.md",
+      "to": "2026-08-08-retention-router.md"
+    },
+    {
+      "from": "sampling-buffer.md",
+      "to": "sharding-config.md"
+    },
+    {
+      "from": "sharding-config.md",
+      "to": "sampling-buffer.md"
+    },
+    {
+      "from": "rollback-manifest.md",
+      "to": "baseline-indexer.md"
+    },
+    {
+      "from": "sharding-digest.md",
+      "to": "checkpoint-scanner.md"
+    },
+    {
+      "from": "2026-08-08-handoff-report.md",
+      "to": "2026-08-08-idempotency-export.md"
+    },
+    {
+      "from": "2026-08-09-sampling-bundle.md",
+      "to": "2026-08-09-backlog-note.md"
+    },
+    {
+      "from": "2026-08-11-threshold-config.py",
+      "to": "2026-08-11-sharding-watcher.md"
+    },
+    {
+      "from": "2026-08-11-sharding-watcher.md",
+      "to": "2026-08-11-threshold-config.py"
+    },
+    {
+      "from": "2026-08-11-compaction-dispatcher.md",
+      "to": "2026-08-11-baseline-parser.md"
+    },
+    {
+      "from": "2026-08-11-checkpoint-worker.md",
+      "to": "2026-08-11-compaction-dispatcher.md"
+    },
+    {
+      "from": "2026-09-11-warmup-transcript.md",
+      "to": "partition-profile.md"
+    },
+    {
+      "from": "2026-09-12-fanout-entry.md",
+      "to": "backpressure-store.md"
+    },
+    {
+      "from": "2026-09-13-baseline-import.md",
+      "to": "2026-08-11-partition-panel.md"
+    },
+    {
+      "from": "2026-09-13-threshold-collector.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "2026-09-13-sampling-loader.md",
+      "to": "2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "from": "2026-09-14-backpressure-timeline.md",
+      "to": "2026-09-13-sampling-loader.md"
+    },
+    {
+      "from": "2026-09-14-backpressure-timeline.md",
+      "to": "2026-09-14-snapshot-stream.md"
+    },
+    {
+      "from": "2026-09-14-backpressure-timeline.md",
+      "to": "2026-09-14-throttling-caption.md"
+    },
+    {
+      "from": "2026-09-14-snapshot-stream.md",
+      "to": "2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "from": "2026-09-14-throttling-caption.md",
+      "to": "2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "from": "2026-09-15-eviction-tag.md",
+      "to": "2026-09-22-rollout-tag.md"
+    },
+    {
+      "from": "2026-09-15-tracing-report.md",
+      "to": "2026-09-14-backpressure-timeline.md"
+    },
+    {
+      "from": "2026-09-15-tracing-report.md",
+      "to": "2026-09-15-backpressure-report.md"
+    },
+    {
+      "from": "2026-09-15-backpressure-report.md",
+      "to": "2026-09-15-tracing-report.md"
+    },
+    {
+      "from": "2026-09-17-eviction-store.md",
+      "to": "2026-09-17-quota-layout.md"
+    },
+    {
+      "from": "2026-09-17-quota-import.md",
+      "to": "2026-09-17-quota-layout.md"
+    },
+    {
+      "from": "2026-09-17-quota-layout.md",
+      "to": "2026-09-17-eviction-store.md"
+    },
+    {
+      "from": "2026-09-17-quota-layout.md",
+      "to": "2026-09-18-compaction-loader.md"
+    },
+    {
+      "from": "2026-09-17-eviction-theme.md",
+      "to": "2026-09-18-retention-stream.md"
+    },
+    {
+      "from": "2026-09-18-checkpoint-export.md",
+      "to": "2026-09-18-compaction-loader.md"
+    },
+    {
+      "from": "2026-09-18-compaction-loader.md",
+      "to": "2026-09-17-quota-layout.md"
+    },
+    {
+      "from": "2026-09-18-compaction-loader.md",
+      "to": "2026-09-28-sampling-queue.md"
+    },
+    {
+      "from": "2026-09-18-retention-sync.md",
+      "to": "2026-09-18-retention-stream.md"
+    },
+    {
+      "from": "2026-09-18-retention-stream.md",
+      "to": "2026-09-17-eviction-theme.md"
+    },
+    {
+      "from": "2026-09-18-retention-stream.md",
+      "to": "2026-09-18-retention-sync.md"
+    },
+    {
+      "from": "2026-09-21-consistency-stream.md",
+      "to": "2026-09-21-rollback-report.md"
+    },
+    {
+      "from": "2026-09-21-consistency-stream.md",
+      "to": "2026-09-28-sampling-queue.md"
+    },
+    {
+      "from": "2026-09-21-rollback-report.md",
+      "to": "2026-09-22-backlog-outline.md"
+    },
+    {
+      "from": "2026-09-21-rollback-report.md",
+      "to": "2026-09-28-sampling-queue.md"
+    },
+    {
+      "from": "2026-09-22-rollout-tag.md",
+      "to": "2026-09-15-eviction-tag.md"
+    },
+    {
+      "from": "2026-09-22-snapshot-scheduler.md",
+      "to": "2026-09-30-warmup-registry.md"
+    },
+    {
+      "from": "2026-09-22-drift-timeline.md",
+      "to": "2026-09-22-baseline-report.md"
+    },
+    {
+      "from": "2026-09-22-drift-timeline.md",
+      "to": "2026-09-28-sampling-queue.md"
+    },
+    {
+      "from": "2026-09-22-baseline-report.md",
+      "to": "2026-09-21-rollback-report.md"
+    },
+    {
+      "from": "2026-09-22-baseline-report.md",
+      "to": "2026-09-28-sampling-queue.md"
+    },
+    {
+      "from": "2026-09-22-backlog-outline.md",
+      "to": "2026-09-21-rollback-report.md"
+    },
+    {
+      "from": "2026-09-22-backlog-outline.md",
+      "to": "2026-09-28-sampling-queue.md"
+    },
+    {
+      "from": "2026-09-25-snapshot-store.md",
+      "to": "2026-09-25-compaction-theme.md"
+    },
+    {
+      "from": "2026-09-25-compaction-theme.md",
+      "to": "2026-09-25-snapshot-store.md"
+    },
+    {
+      "from": "2026-09-28-sampling-queue.md",
+      "to": "2026-09-18-compaction-loader.md"
+    },
+    {
+      "from": "2026-09-28-sampling-queue.md",
+      "to": "2026-09-21-rollback-report.md"
+    },
+    {
+      "from": "2026-09-28-sampling-queue.md",
+      "to": "2026-09-22-baseline-report.md"
+    },
+    {
+      "from": "2026-09-30-warmup-registry.md",
+      "to": "2026-09-22-snapshot-scheduler.md"
+    },
+    {
+      "from": "2026-10-03-throttling-timeline.md",
+      "to": "2026-09-22-snapshot-scheduler.md"
+    },
+    {
+      "from": "sampling-buffer.md",
+      "to": "rollout-bundle.ps1"
+    },
+    {
+      "from": "sampling-buffer.md",
+      "to": "compaction-resolver.ps1"
+    },
+    {
+      "from": "sampling-buffer.md",
+      "to": "tracing-loader.ps1"
+    },
+    {
+      "from": "sampling-buffer.md",
+      "to": "2026-09-10-rollback-config.md"
+    },
+    {
+      "from": "rollout-bundle.ps1",
+      "to": "2026-09-10-rollback-config.md"
+    },
+    {
+      "from": "rollout-bundle.ps1",
+      "to": "sampling-buffer.md"
+    },
+    {
+      "from": "sampling-buffer.md",
+      "to": "sampling-buffer.md"
+    },
+    {
+      "from": "tracing-loader.ps1",
+      "to": "sampling-buffer.md"
+    },
+    {
+      "from": "compaction-resolver.ps1",
+      "to": "sampling-buffer.md"
+    },
+    {
+      "from": "threshold-stream.md",
+      "to": "coverage-bundle.md"
+    },
+    {
+      "from": "threshold-stream.md",
+      "to": "coverage-preview.md"
+    },
+    {
+      "from": "coverage-preview.md",
+      "to": "threshold-stream.md"
+    },
+    {
+      "from": "coverage-validator.md",
+      "to": "threshold-stream.md"
+    },
+    {
+      "from": "coverage-bundle.md",
+      "to": "threshold-stream.md"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "drift-panel.md"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "rollback-timeline.md"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "idempotency-digest.md"
+    },
+    {
+      "from": "checkpoint-scanner.json",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "backpressure-store.md",
+      "to": "drift-formatter.json"
+    },
+    {
+      "from": "drift-formatter.json",
+      "to": "throughput-router.py"
+    },
+    {
+      "from": "drift-panel.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "rollback-timeline.md",
+      "to": "drift-digest.py"
+    },
+    {
+      "from": "rollback-timeline.md",
+      "to": "throughput-router.py"
+    },
+    {
+      "from": "idempotency-digest.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "idempotency-digest.md",
+      "to": "rollback-timeline.md"
+    },
+    {
+      "from": "throughput-router.py",
+      "to": "drift-digest.py"
+    },
+    {
+      "from": "throughput-router.py",
+      "to": "drift-formatter.json"
+    },
+    {
+      "from": "drift-digest.py",
+      "to": "throughput-router.py"
+    },
+    {
+      "from": "drift-digest.py",
+      "to": "rollback-timeline.md"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "latency-tag.py"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "rollback-registry.md"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "retention-router.md"
+    },
+    {
+      "from": "sharding-note.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "sharding-note.md",
+      "to": "drift-sync.md"
+    },
+    {
+      "from": "drift-sync.md",
+      "to": "latency-tag.py"
+    },
+    {
+      "from": "drift-sync.md",
+      "to": "rollback-registry.md"
+    },
+    {
+      "from": "rollback-registry.md",
+      "to": "latency-tag.py"
+    },
+    {
+      "from": "rollback-registry.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "retention-router.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "latency-tag.py",
+      "to": "rollback-registry.md"
+    },
+    {
+      "from": "latency-tag.py",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "consistency-filter.ps1"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "coverage-search.ps1"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "coverage-theme.ps1"
+    },
+    {
+      "from": "drift-store.md",
+      "to": "latency-cache.md"
+    },
+    {
+      "from": "consistency-sync.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "latency-cache.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "latency-cache.md",
+      "to": "coverage-sync.md"
+    },
+    {
+      "from": "coverage-sync.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "coverage-sync.md",
+      "to": "latency-cache.md"
+    },
+    {
+      "from": "snapshot-parser.md",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "snapshot-parser.md",
+      "to": "latency-cache.md"
+    },
+    {
+      "from": "coverage-search.ps1",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "coverage-search.ps1",
+      "to": "consistency-filter.ps1"
+    },
+    {
+      "from": "coverage-theme.ps1",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "coverage-theme.ps1",
+      "to": "latency-cache.md"
+    },
+    {
+      "from": "consistency-filter.ps1",
+      "to": "drift-store.md"
+    },
+    {
+      "from": "consistency-filter.ps1",
+      "to": "coverage-search.ps1"
+    },
+    {
+      "from": "2026-09-23-coverage-registry.md",
+      "to": "threshold-stream.md"
+    },
+    {
+      "from": "2026-09-23-coverage-registry.md",
+      "to": "coverage-bundle.md"
+    },
+    {
+      "from": "consistency-config.js",
+      "to": "tracing-metric.html"
+    },
+    {
+      "from": "tracing-metric.html",
+      "to": "consistency-config.js"
+    },
+    {
+      "from": "consistency-indexer.js",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "consistency-indexer.js",
+      "to": "throughput-collector.js"
+    },
+    {
+      "from": "rollback-sync.css",
+      "to": "tracing-metric.html"
+    },
+    {
+      "from": "throughput-collector.js",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "throughput-collector.js",
+      "to": "consistency-indexer.js"
+    },
+    {
+      "from": "compaction-queue.js",
+      "to": "throughput-collector.js"
+    },
+    {
+      "from": "tracing-bundle.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "tracing-bundle.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "throughput-stream.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "throughput-stream.js",
+      "to": "backlog-channel.js"
+    },
+    {
+      "from": "fanout-validator.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "fanout-validator.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "baseline-theme.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "baseline-theme.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "replication-config.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "replication-config.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "retention-store.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "retention-store.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "handoff-bundle.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "backlog-channel.js"
+    },
+    {
+      "from": "snapshot-parser.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "snapshot-parser.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "tracing-search.js",
+      "to": "throughput-stream.js"
+    },
+    {
+      "from": "drift-panel.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "backlog-channel.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "drift-export.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "drift-export.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "consistency-layout.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "warmup-router.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "warmup-router.js",
+      "to": "fanout-validator.js"
+    },
+    {
+      "from": "tracing-metric.html",
+      "to": "throughput-collector.js"
+    },
+    {
+      "from": "tracing-metric.html",
+      "to": "rollback-sync.css"
+    },
+    {
+      "from": "consistency-indexer.js",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "consistency-indexer.js",
+      "to": "throughput-collector.js"
+    },
+    {
+      "from": "rollback-sync.css",
+      "to": "tracing-metric.html"
+    },
+    {
+      "from": "throughput-collector.js",
+      "to": "backpressure-layout.js"
+    },
+    {
+      "from": "throughput-collector.js",
+      "to": "consistency-indexer.js"
+    },
+    {
+      "from": "compaction-queue.js",
+      "to": "throughput-collector.js"
+    },
+    {
+      "from": "tracing-bundle.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "tracing-bundle.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "throughput-stream.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "throughput-stream.js",
+      "to": "backlog-channel.js"
+    },
+    {
+      "from": "fanout-validator.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "fanout-validator.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "baseline-theme.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "baseline-theme.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "replication-config.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "replication-config.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "retention-store.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "retention-store.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "handoff-bundle.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "backpressure-layout.js",
+      "to": "backlog-channel.js"
+    },
+    {
+      "from": "snapshot-parser.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "snapshot-parser.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "tracing-search.js",
+      "to": "throughput-stream.js"
+    },
+    {
+      "from": "drift-panel.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "backlog-channel.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "drift-export.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "drift-export.js",
+      "to": "handoff-bundle.js"
+    },
+    {
+      "from": "consistency-layout.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "warmup-router.js",
+      "to": "tracing-queue.js"
+    },
+    {
+      "from": "warmup-router.js",
+      "to": "fanout-validator.js"
+    },
+    {
+      "from": "tracing-metric.html",
+      "to": "throughput-collector.js"
+    },
+    {
+      "from": "tracing-metric.html",
+      "to": "rollback-sync.css"
+    }
+  ],
+  "A_LAYER": {
+    "C": "共享基础",
+    "E": "入口边界",
+    "A": "应用编排",
+    "D": "领域逻辑",
+    "K": "算法计算",
+    "M": "中间件",
+    "P": "持久化",
+    "I": "集成适配",
+    "R": "运行基础",
+    "L": "库与SDK",
+    "F": "声明配置",
+    "O": "运维交付",
+    "T": "测试验证",
+    "S": "文档规范",
+    "X": "开发工具",
+    "Z": "其他"
+  },
+  "B_MODULE": {
+    "G": "跨域通用",
+    "U": "用户交互",
+    "B": "核心业务",
+    "D": "数据状态",
+    "I": "身份权限",
+    "N": "网络协议",
+    "M": "消息事件",
+    "S": "安全隐私",
+    "C": "配置策略",
+    "O": "可观测性",
+    "R": "可靠性恢复",
+    "P": "性能资源",
+    "W": "流程调度",
+    "A": "分析智能",
+    "H": "硬件设备",
+    "L": "本地化",
+    "V": "构建发布",
+    "Q": "质量保障",
+    "E": "扩展插件",
+    "Z": "其他"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "capabilities": [
+    "app/resources.read",
+    "app/tasks.manage",
+    "app/tools.expose-to-model",
+    "app/sessions.read",
+    "app/sessions.manage",
+    "app/session.start-turn"
+  ],
+  "contributes": {
+    "cards": [
+      {
+        "cardForm": "structural",
+        "description": "仓库自动索引：一仓一索引，扫描进度与打断，只看本仓",
+        "face": {
+          "image": "assets/cover.png"
+        },
+        "id": "panel",
+        "realization": "page",
+        "route": "/panel.html",
+        "siteNavEntry": true,
+        "title": "仓库自动索引"
+      },
+      {
+        "description": "一次扫描的现状：状态、文件数、索引条目数、读不到的目录、上次扫描时间。模型可读这张卡看现状。",
+        "face": {
+          "image": "assets/cover.png"
+        },
+        "id": "report",
+        "route": "/report.html",
+        "title": "扫描报告"
+      },
+      {
+        "description": "索引链路体检：六环（初始化/清点/基线/索引/核对/检索）逐环给状态、证据与来源文件，可溯源到 .aoci 下哪一个文件；缺环时直接给修复步骤。模型可读这张卡判断链路断在哪里。",
+        "face": {
+          "image": "assets/cover.png"
+        },
+        "id": "chain",
+        "route": "/chain.html",
+        "title": "链路体检"
+      }
+    ],
+    "messageRenderers": [
+      {
+        "customType": "scan-report",
+        "cardId": "report"
+      },
+      {
+        "customType": "index-chain",
+        "cardId": "chain"
+      }
+    ]
+  },
+  "description": "仓库自动索引：一仓一索引，克隆即登记扫描，随时可打断，本仓隔离查看。语义条目仍走 AOCI 链路由 Agent 创作，插件只做清点、进度与隔离展示。",
+  "entry": "index.js",
+  "icon": "assets/icon.png",
+  "id": "repo-auto-index",
+  "manifestVersion": 2,
+  "minAppVersion": "1.0.16-beta",
+  "name": "仓库自动索引",
+  "version": "0.4.0"
+}

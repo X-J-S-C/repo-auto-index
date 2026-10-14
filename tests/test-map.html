@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- 关系网图组件离线验证页 · 只为本地跑 graph-map.js 用，不进插件包。
+     引入真实组件（由测试服务器 /app-assets/graph-map.js 映射到 App 内的源文件），
+     喂 graph-contract.json（真数据 392/313/154），容器 1000x700。 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>graph-map 验证台</title>
+  <style>
+    /* 模拟宿主主题变量，组件应当读这些变量而不是写死色值 */
+    :root {
+      --bg: #F7F6F3;
+      --bg-card: #FFFFFF;
+      --text: #1b1b1d;
+      --text-muted: #8a857c;
+      --border: #EAEAEA;
+      --accent: #537D96;
+    }
+    html, body { margin: 0; background: var(--bg); color: var(--text);
+      font: 13px/1.6 system-ui, "Microsoft YaHei", sans-serif; }
+    #stage { width: 1000px; height: 700px; margin: 20px; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div id="stage"></div>
+  <script type="module">
+    import { renderGraphMap, focusNode } from "/app-assets/graph-map.js";
+
+    const stage = document.getElementById("stage");
+    const res = await fetch("/graph-contract.json");
+    const graph = await res.json();
+
+    let selected = null;
+    const handle = renderGraphMap(stage, graph, {
+      showIsolated: false,
+      maxNodes: 400,
+      onSelectNode: (id) => { selected = id; },
+    });
+
+    // 暴露给 playwright 读取
+    window.__handle = handle;
+    window.__graph = graph;
+    window.__getSelected = () => selected;
+    window.__focusNode = focusNode;
+    window.__renderGraphMap = renderGraphMap;
+    window.__ready = true;
+
+    console.log("[test] mounted. stats =", JSON.stringify(handle.stats));
+  </script>
+</body>
+</html>

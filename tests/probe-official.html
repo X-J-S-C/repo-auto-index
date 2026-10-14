@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./assets/app-ui.css">
+  <link rel="stylesheet" href="./assets/theme.css">
+  <style>body{margin:0;background:#F7F6F3;font:13px system-ui,"Microsoft YaHei";padding:24px}
+  .probe{margin-bottom:24px}</style>
+</head>
+<body>
+  <div id="scope" data-hana-app-ui>
+    <h3 style="font-size:12px;color:#8a857c;letter-spacing:.08em;margin:0 0 10px">官方控件探测</h3>
+    <div class="probe" id="p-btn"></div>
+    <div class="probe" id="p-icon"></div>
+    <div class="probe" id="p-input"></div>
+    <div class="probe" id="p-grid"></div>
+    <div class="probe" id="p-list"></div>
+    <div class="probe" id="p-empty"></div>
+    <div class="probe" id="p-tabs"></div>
+  </div>
+  <pre id="log" style="font:11px monospace;color:#a3452f"></pre>
+  <script type="module">
+    const log = (m) => { document.getElementById("log").textContent += m + "\n"; };
+    try {
+      const mod = await import("./assets/app-ui.js");
+      log("exports: " + Object.keys(mod).join(", "));
+      const controls = mod.APP_UI_CONTROLS;
+      log("controls: " + Object.keys(controls).join(", "));
+      const { mountAppUi, appUi, appUiIcon } = mod;
+
+      const b = mountAppUi(document.getElementById("p-btn"), "Button", { children: "登记并扫描", variant: "primary" });
+      log("Button PROPS/API: " + Object.keys(b || {}).join(","));
+      const b2 = mountAppUi(document.getElementById("p-icon"), "IconButton", { children: appUiIcon("chevron"), label: "复制" });
+      const i1 = mountAppUi(document.getElementById("p-input"), "TextInput", { value: "C:\\projects\\atlas-workspace", label: "目录" });
+      const g = mountAppUi(document.getElementById("p-grid"), "Grid", { minColumnWidth: "160px", children: [
+        appUi("ListRow", { title: "文件", description: "740", meta: "done" }),
+        appUi("ListRow", { title: "索引条目", description: "392", meta: "实时" }),
+      ]});
+      const lr = mountAppUi(document.getElementById("p-list"), "ListRow", {
+        title: "Atlas Workspace", description: "C:\\projects\\atlas-workspace", meta: "就绪", action: appUi("Button", { children: "查看", variant: "secondary", size: "sm" }),
+      });
+      const es = mountAppUi(document.getElementById("p-empty"), "EmptyState", { title: "还没有登记仓库", description: "一仓一索引，不跨仓" });
+      const tb = mountAppUi(document.getElementById("p-tabs"), "Tabs", { tabs: [{id:"a",label:"概览"},{id:"b",label:"预览"}], value: "a", onChange: () => {} });
+      log("all mounted OK");
+      log("BUTTON OUTER: " + document.getElementById("p-btn").innerHTML.slice(0,300));
+      log("LISTROW OUTER: " + document.getElementById("p-list").innerHTML.slice(0,400));
+      log("TABS OUTER: " + document.getElementById("p-tabs").innerHTML.slice(0,300));
+    } catch (e) {
+      log("ERR " + e.name + " [" + (e.code||"") + "] " + e.message);
+    }
+  </script>
+</body>
+</html>

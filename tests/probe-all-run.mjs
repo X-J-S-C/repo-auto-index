@@ -1,0 +1,18 @@
+import { chromium } from "playwright-core";
+import { resolveChromium } from "./_browser.mjs";
+import http from "node:http"; import fs from "node:fs"; import path from "node:path";
+import { serveStatic } from "./_resolve.mjs";
+const root = path.resolve(process.cwd());
+const MIME = {".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".json":"application/json; charset=utf-8",".png":"image/png"};
+const server = http.createServer((req,res)=>{ serveStatic(res, req.url, MIME); });
+await new Promise(r=>server.listen(0,"127.0.0.1",r)); const port=server.address().port;
+const b = await chromium.launch({executablePath:resolveChromium()});
+const p = await b.newPage({viewport:{width:1100,height:900},deviceScaleFactor:2});
+p.on("pageerror",e=>console.log("PAGEERROR:",e.message));
+await p.goto(`http://127.0.0.1:${port}/probe-all.html`,{waitUntil:"networkidle"});
+await p.waitForTimeout(2000);
+const out = await p.evaluate(()=>window.__probeOut || "(no output)");
+fs.writeFileSync("probe-all.txt", out, "utf8");
+console.log(await p.evaluate(()=>document.getElementById("log").textContent));
+await p.screenshot({path:"probe-all.png",fullPage:true});
+await b.close(); server.close();

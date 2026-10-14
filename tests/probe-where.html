@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./assets/app-ui.css">
+  <link rel="stylesheet" href="./assets/theme.css">
+</head>
+<body>
+  <div id="scope" data-hana-app-ui><div id="host"></div></div>
+  <pre id="log" style="font:11px monospace;white-space:pre-wrap"></pre>
+  <script type="module">
+    const log = (m) => { document.getElementById("log").textContent += m + "\n"; };
+    const { mountAppUi } = await import("./assets/app-ui.js");
+    const h = mountAppUi(document.getElementById("host"), "Button", { children: "登记并扫描", variant: "primary" });
+    await new Promise(r => setTimeout(r, 300));
+
+    const host = document.getElementById("host");
+    log("host.children: " + [...host.children].map(n => n.tagName + "." + n.className + "[sr=" + !!n.shadowRoot + "]").join(" | "));
+    log("host.shadowRoot: " + (host.shadowRoot ? "yes: " + host.shadowRoot.innerHTML.slice(0,500) : "no"));
+
+    // 全文档找 button
+    const btns = [...document.querySelectorAll("button")];
+    log("buttons in doc: " + btns.length);
+    for (const b of btns) log("  button text=" + JSON.stringify(b.textContent) + " cls=" + b.className + " inShadow=" + !!b.getRootNode()?.host);
+    // 找所有 shadow roots
+    const all = [...document.querySelectorAll("*")];
+    const srs = all.filter(n => n.shadowRoot);
+    log("shadow hosts: " + srs.length + " -> " + srs.map(n=>n.tagName+"."+n.className).join(","));
+    for (const s of srs) log("SR CONTENT: " + s.shadowRoot.innerHTML.slice(0, 800));
+
+    // 关键 API 清单
+    const sdk = await import("./assets/sdk.js");
+    log("hana keys: " + Object.keys(sdk.hana).join(", "));
+  </script>
+</body>
+</html>

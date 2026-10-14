@@ -1,0 +1,555 @@
+#AOCI-CODE-VOLUME: 1
+
+===C:/projects/atlas-workspace/===
+threshold-caption[ZZ1T]: F:临时产物：配置，涉及 巡检 | R:- | A:- | S:该文件同时被多处引用，改前先确认调用方
+coverage-digest.gitattributes[FV6T]: F:会话 的声明式配置，定义 验收 | R:- | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+partition-parser.gitignore[FV6T]: F:配置文件：声明 缓存 与 压测 的取值 | R:- | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+latency-layout.md[SG5T]: F:记录 路由 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:体积超过阈值会触发分片，注意上限
+partition-profile.md[SQ4T]: F:模板 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:路径大小写敏感，重命名前先检查引用
+backpressure-cache.html[EU3S]: F:任务 的入口，负责 验收 的初始化与分发 | R:- | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+throughput-import.md[SQ4T]: F:词表 的说明文档，覆盖 压测 的用法与边界 | R:- | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+baseline-search.md[SA4L]: F:记录 基线 的规范与约定，供 构建 场景查阅 | R:- | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+warmup-transcript.svg[FA3L]: F:配置文件：声明 快照 与 巡检 的取值 | R:- | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+idempotency-queue.md[SO4T]: F:记录 通道 的规范与约定，供 验收 场景查阅 | R:- | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/.agent/===
+fanout-dispatcher.json[FC5S]: F:配置文件：声明 队列 与 压测 的取值 | R:code:.agent/sessions/replication-import.json | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/.agent/sessions/===
+rollback-adapter.json[PM3S]: F:校验 的持久化读写，落盘为 构建 | R:code:.agent/sessions/replication-import.json | A:- | S:-
+replication-import.json[PM2T]: F:负责 渲染 的存储与 巡检 的恢复 | R:code:.agent/sessions/rollback-adapter.json | A:- | S:-
+
+===C:/projects/atlas/.notebook/===
+retention-note.json[FC3T]: F:导出 的声明式配置，定义 验收 | R:- | A:启动时自动执行 | S:-
+handoff-caption.json[FC3T]: F:配置文件：声明 索引 与 压测 的取值 | R:- | A:按需懒加载 | S:-
+latency-graph.json[FC3T]: F:配置 的声明式配置，定义 构建 | R:- | A:启动时自动执行 | S:-
+compaction-timeline.json[FE6T]: F:配置文件：声明 会话 与 巡检 的取值 | R:code:.notebook/extensions/git-plugin/rollback-validator.js, code:.notebook/extensions/calendar/rollback-validator.js, code:.notebook/extensions/metrics-dashboard/throughput-bundle.json | A:按需懒加载 | S:-
+drift-buffer.json[FC3T]: F:缓存 的声明式配置，定义 验收 | R:- | A:启动时自动执行 | S:-
+compaction-bundle.json[FC3T]: F:配置文件：声明 路由 与 压测 的取值 | R:- | A:按需懒加载 | S:-
+warmup-theme.json[FC3T]: F:模板 的声明式配置，定义 构建 | R:- | A:启动时自动执行 | S:-
+snapshot-bundle.json[FC3T]: F:配置文件：声明 任务 与 巡检 的取值 | R:- | A:按需懒加载 | S:-
+idempotency-buffer.json[FC3T]: F:词表 的声明式配置，定义 验收 | R:- | A:启动时自动执行 | S:-
+throttling-import.json[FC3T]: F:配置文件：声明 基线 与 压测 的取值 | R:code:.notebook/extensions/tasks-plugin/rollback-validator.js | A:按需懒加载 | S:-
+coverage-renderer.json[FC3T]: F:快照 的声明式配置，定义 构建 | R:- | A:启动时自动执行 | S:-
+
+===C:/projects/atlas/.notebook/extensions/metrics-dashboard/===
+snapshot-note.json[FU4S]: F:配置文件：声明 通道 与 巡检 的取值 | R:code:.notebook/extensions/metrics-dashboard/throughput-bundle.json | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+throughput-bundle.json[FE3T]: F:队列 的声明式配置，定义 验收 | R:code:.notebook/extensions/metrics-dashboard/snapshot-note.json, code:.notebook/extensions/metrics-dashboard/threshold-theme.css | A:启动时自动执行 | S:-
+threshold-theme.css[FE3L]: F:配置文件：声明 校验 与 压测 的取值 | R:code:.notebook/extensions/metrics-dashboard/throughput-bundle.json | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/calendar/===
+snapshot-note.json[FC3T]: F:渲染 的声明式配置，定义 构建 | R:code:.notebook/extensions/calendar/throughput-bundle.json | A:启动时自动执行 | S:-
+rollback-validator.js[EU5L]: F:程序入口，装配 导出 并暴露 巡检 接口 | R:code:.notebook/extensions/calendar/throughput-bundle.json, code:.notebook/extensions/calendar/snapshot-note.json, code:.notebook/compaction-bundle.json | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+throughput-bundle.json[FE3T]: F:索引 的声明式配置，定义 验收 | R:code:.notebook/extensions/calendar/snapshot-note.json, code:.notebook/extensions/calendar/rollback-validator.js | A:启动时自动执行 | S:-
+
+===C:/projects/atlas/.notebook/extensions/dataview/===
+throughput-bundle.json[FE3T]: F:配置文件：声明 配置 与 压测 的取值 | R:code:.notebook/extensions/dataview/threshold-theme.css | A:按需懒加载 | S:-
+threshold-theme.css[FE3S]: F:会话 的声明式配置，定义 构建 | R:code:.notebook/extensions/dataview/throughput-bundle.json | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/sketch-plugin/===
+snapshot-note.json[FU4L]: F:配置文件：声明 缓存 与 巡检 的取值 | R:code:.notebook/extensions/sketch-plugin/throughput-bundle.json | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+throughput-bundle.json[FE3T]: F:路由 的声明式配置，定义 验收 | R:code:.notebook/extensions/sketch-plugin/snapshot-note.json, code:.notebook/extensions/sketch-plugin/threshold-theme.css | A:启动时自动执行 | S:-
+threshold-theme.css[FE3L]: F:配置文件：声明 模板 与 压测 的取值 | R:code:.notebook/extensions/sketch-plugin/throughput-bundle.json | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/git-plugin/===
+rollback-validator.js[ER7L]: F:任务 的入口，负责 构建 的初始化与分发 | R:code:.notebook/compaction-timeline.json, code:partition-parser.gitignore | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+throughput-bundle.json[FE3T]: F:配置文件：声明 词表 与 巡检 的取值 | R:code:.notebook/extensions/git-plugin/rollback-validator.js, code:.notebook/extensions/git-plugin/threshold-theme.css, code:.notebook/extensions/git-plugin/retention-transcript.sh | A:按需懒加载 | S:-
+retention-transcript.sh[RS4T]: F:基线 的运行基础组件，支撑 验收 | R:code:.notebook/extensions/git-plugin/rollback-validator.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+threshold-theme.css[FE3L]: F:配置文件：声明 快照 与 压测 的取值 | R:code:.notebook/extensions/git-plugin/rollback-validator.js | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/rest-api-plugin/===
+throughput-bundle.json[FE5T]: F:通道 的声明式配置，定义 构建 | R:code:.notebook/extensions/rest-api-plugin/threshold-theme.css, code:partition-parser.gitignore | A:启动时自动执行 | S:-
+threshold-theme.css[FE3S]: F:配置文件：声明 队列 与 巡检 的取值 | R:code:.notebook/extensions/rest-api-plugin/throughput-bundle.json | A:- | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/.notebook/extensions/tasks-plugin/===
+rollback-validator.js[EW6L]: F:校验 的入口，负责 验收 的初始化与分发 | R:code:.notebook/extensions/tasks-plugin/throughput-bundle.json, code:.notebook/throttling-import.json | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+throughput-bundle.json[FE3T]: F:配置文件：声明 渲染 与 压测 的取值 | R:code:.notebook/extensions/tasks-plugin/rollback-validator.js, code:.notebook/extensions/tasks-plugin/threshold-theme.css | A:按需懒加载 | S:-
+threshold-theme.css[FE3T]: F:导出 的声明式配置，定义 构建 | R:code:.notebook/extensions/tasks-plugin/rollback-validator.js | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/realagent/===
+snapshot-note.json[PM2T]: F:负责 索引 的存储与 巡检 的恢复 | R:code:.agent/sessions/replication-import.json, code:.notebook/extensions/realagent/throughput-bundle.json | A:- | S:-
+throughput-bundle.json[FE5T]: F:配置 的声明式配置，定义 验收 | R:code:.notebook/extensions/realagent/snapshot-note.json, code:.agent/fanout-dispatcher.json | A:启动时自动执行 | S:-
+threshold-theme.css[FE3L]: F:配置文件：声明 会话 与 压测 的取值 | R:code:.notebook/extensions/realagent/throughput-bundle.json | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/table-editor/===
+snapshot-note.json[FC3T]: F:缓存 的声明式配置，定义 构建 | R:code:.notebook/extensions/table-editor/rollback-validator.js | A:启动时自动执行 | S:-
+rollback-validator.js[EU4M]: F:程序入口，装配 路由 并暴露 巡检 接口 | R:code:.notebook/extensions/table-editor/throughput-bundle.json, code:.notebook/extensions/table-editor/threshold-theme.css | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+throughput-bundle.json[FE3T]: F:模板 的声明式配置，定义 验收 | R:code:.notebook/extensions/table-editor/rollback-validator.js, code:.notebook/extensions/table-editor/snapshot-note.json | A:启动时自动执行 | S:-
+threshold-theme.css[FE3T]: F:配置文件：声明 任务 与 压测 的取值 | R:code:.notebook/extensions/table-editor/rollback-validator.js | A:- | S:-
+
+===C:/projects/atlas/.notebook/extensions/templater/===
+rollback-validator.js[EW5T]: F:词表 的入口，负责 构建 的初始化与分发 | R:code:.notebook/extensions/templater/throughput-bundle.json, code:.notebook/extensions/templater/threshold-theme.css | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+throughput-bundle.json[FE3T]: F:配置文件：声明 基线 与 巡检 的取值 | R:code:.notebook/extensions/templater/rollback-validator.js, code:.notebook/extensions/templater/threshold-theme.css | A:按需懒加载 | S:-
+threshold-theme.css[FE3S]: F:快照 的声明式配置，定义 验收 | R:code:.notebook/extensions/templater/rollback-validator.js | A:- | S:-
+
+===C:/projects/atlas/.notebook/themes/blue-topaz/===
+throughput-bundle.json[FU3T]: F:配置文件：声明 通道 与 压测 的取值 | R:code:.notebook/handoff-caption.json | A:按需懒加载 | S:-
+
+===C:/projects/atlas/.notebook/themes/minimal/===
+throughput-bundle.json[FU3T]: F:队列 的声明式配置，定义 构建 | R:code:.notebook/themes/minimal/compaction-adapter.css | A:启动时自动执行 | S:-
+compaction-adapter.css[FU3L]: F:配置文件：声明 校验 与 巡检 的取值 | R:code:.notebook/themes/minimal/throughput-bundle.json | A:- | S:-
+
+===C:/projects/atlas/.vendor-pkg/===
+warmup-renderer.py[XA3T]: F:渲染 的开发工具，辅助 验收 | R:code:.vendor-pkg/backpressure-layout.py | A:- | S:缓存与落盘不一致时以落盘为准
+backpressure-layout.py[KA5S]: F:导出 算法实现，输出 压测 并缓存中间量 | R:code:.vendor-pkg/warmup-renderer.py | A:- | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/.vendor-pkg/timekit/===
+warmup-import.md[SZ4T]: F:记录 索引 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:改动后需重启生效，否则读到的仍是旧值
+throttling-outline[SZ5T]: F:配置 的说明文档，覆盖 巡检 的用法与边界 | R:code:.vendor-pkg/timekit/warmup-import.md | A:- | S:该文件同时被多处引用，改前先确认调用方
+coverage-outline[SZ3T]: F:记录 会话 的规范与约定，供 验收 场景查阅 | R:code:.vendor-pkg/timekit/throttling-outline | A:- | S:缺少必要字段时直接报错退出，不回退默认值
+backpressure-store.md[SE4S]: F:缓存 的说明文档，覆盖 压测 的用法与边界 | R:code:.vendor-pkg/timekit/throughput-bundle.json | A:- | S:与同一目录的配置存在优先级关系，后者覆盖前者
+throughput-bundle.json[FE6T]: F:路由 的声明式配置，定义 构建 | R:code:.vendor-pkg/timekit/backpressure-store.md | A:- | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/.vendor-pkg/timekit/assets/===
+quota-indexer.css[FU3S]: F:配置文件：声明 模板 与 巡检 的取值 | R:code:.vendor-pkg/timekit/assets/sampling-tag.js | A:- | S:-
+sampling-tag.js[EC4M]: F:任务 的入口，负责 验收 的初始化与分发 | R:code:.vendor-pkg/timekit/assets/quota-indexer.css | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+
+===C:/projects/atlas/.vendor-pkg/timekit/extensions/===
+backpressure-transcript.js[EM7M]: F:程序入口，装配 词表 并暴露 压测 接口 | R:code:.vendor-pkg/timekit/lib/backpressure-transcript.js, code:.vendor-pkg/timekit/lib/retention-scanner.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/===
+warmup-timeline.js[LD4T]: F:基线 的公共库实现，被 构建 复用 | R:- | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+fanout-panel.js[LS6S]: F:SDK 模块：封装 快照，供 巡检 调用 | R:code:.vendor-pkg/timekit/lib/retention-scanner.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+retention-scanner.js[PD7L]: F:通道 的持久化读写，落盘为 验收 | R:code:.vendor-pkg/timekit/lib/fanout-panel.js, code:.vendor-pkg/timekit/lib/tracing-router.js | A:- | S:改动后需重启生效，否则读到的仍是旧值
+threshold-cache.js[DW7L]: F:业务规则层，约束 队列 在 压测 下的行为 | R:code:.vendor-pkg/timekit/lib/retention-scanner.js | A:- | S:该文件同时被多处引用，改前先确认调用方
+threshold-registry.js[OO4T]: F:校验 的运维脚本，用于 构建 | R:- | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+coverage-digest.js[SU5S]: F:渲染 的说明文档，覆盖 巡检 的用法与边界 | R:code:.vendor-pkg/timekit/lib/consistency-transcript.js | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+consistency-transcript.js[LD5M]: F:导出 的公共库实现，被 验收 复用 | R:code:.vendor-pkg/timekit/lib/coverage-digest.js | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+backpressure-transcript.js[DM7M]: F:业务规则层，约束 索引 在 压测 下的行为 | R:code:.vendor-pkg/timekit/lib/consistency-transcript.js, code:.vendor-pkg/timekit/lib/retention-scanner.js | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+snapshot-session.js[EU6L]: F:配置 的入口，负责 构建 的初始化与分发 | R:code:.vendor-pkg/timekit/routes/quota-filter.js | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+rollout-scheduler.js[DA6S]: F:业务规则层，约束 会话 在 巡检 下的行为 | R:code:.vendor-pkg/timekit/lib/threshold-cache.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+compaction-graph.js[PD4T]: F:缓存 的持久化读写，落盘为 验收 | R:code:.vendor-pkg/timekit/lib/retention-scanner.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+threshold-worker.js[AW7L]: F:编排层：按序驱动 路由 与 压测 | R:code:.vendor-pkg/timekit/lib/coverage-watcher.js, code:.vendor-pkg/timekit/lib/idempotency-dispatcher.js | A:- | S:删除前需确认无挂载点，否则会有残留
+coverage-watcher.js[DW6T]: F:模板 的领域逻辑，处理 构建 的流转 | R:code:.vendor-pkg/timekit/lib/tracing-router.js | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+rollout-router.js[KU4S]: F:任务 算法实现，输出 巡检 并缓存中间量 | R:code:.vendor-pkg/timekit/lib/tracing-router.js | A:- | S:该文件同时被多处引用，改前先确认调用方
+tracing-router.js[KW6M]: F:词表 的计算实现，按 验收 推导结果 | R:code:.vendor-pkg/timekit/lib/rollout-router.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+idempotency-dispatcher.js[II3T]: F:适配层：把 基线 转成 压测 可用的形态 | R:- | A:按需懒加载 | S:-
+threshold-layout.js[IU6M]: F:快照 的集成适配，对接 构建 | R:code:.vendor-pkg/timekit/lib/warmup-timeline.js | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/pretty-select/===
+coverage-search.css[FU2T]: F:配置文件：声明 通道 与 巡检 的取值 | R:code:.vendor-pkg/timekit/lib/pretty-select/backlog-adapter.js | A:- | S:-
+backlog-adapter.js[EU3S]: F:队列 的入口，负责 验收 的初始化与分发 | R:code:.vendor-pkg/timekit/lib/pretty-select/coverage-search.css | A:启动时自动执行 | S:-
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/core/===
+latency-metric.js[AM5S]: F:编排层：按序驱动 校验 与 压测 | R:code:.vendor-pkg/timekit/lib/feedback/backpressure-layout.js, code:.vendor-pkg/timekit/lib/feedback/core/idempotency-profile.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+threshold-sync.js[IO3T]: F:渲染 的集成适配，对接 构建 | R:code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+latency-queue.js[DM3T]: F:业务规则层，约束 导出 在 巡检 下的行为 | R:code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+handoff-channel.js[SM3T]: F:记录 索引 的规范与约定，供 验收 场景查阅 | R:code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js | A:启动时自动执行 | S:-
+idempotency-profile.js[DD4T]: F:业务规则层，约束 配置 在 压测 下的行为 | R:code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/===
+backpressure-layout.js[EE4T]: F:会话 的入口，负责 构建 的初始化与分发 | R:code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+consistency-layout.json[FE2T]: F:配置文件：声明 缓存 与 巡检 的取值 | R:code:.vendor-pkg/timekit/lib/feedback/backpressure-layout.js | A:- | S:-
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/feedback/ui/===
+consistency-export.css[FU3S]: F:路由 的声明式配置，定义 验收 | R:code:.vendor-pkg/timekit/lib/feedback/ui/eviction-loader.js | A:- | S:-
+eviction-loader.js[EU4M]: F:程序入口，装配 模板 并暴露 压测 接口 | R:code:.vendor-pkg/timekit/lib/feedback/core/latency-metric.js, code:.vendor-pkg/timekit/lib/feedback/ui/consistency-export.css | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/model-config/core/===
+latency-metric.js[AC6M]: F:任务 的应用编排，调度 构建 | R:code:.vendor-pkg/timekit/lib/model-config/backpressure-layout.js | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+drift-adapter.js[LS7S]: F:SDK 模块：封装 词表，供 巡检 调用 | R:code:.vendor-pkg/timekit/lib/model-config/core/consistency-worker.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+consistency-worker.js[LC5T]: F:基线 的公共库实现，被 验收 复用 | R:code:.vendor-pkg/timekit/lib/model-config/core/drift-adapter.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/model-config/===
+backpressure-layout.js[EC4T]: F:程序入口，装配 快照 并暴露 压测 接口 | R:code:.vendor-pkg/timekit/lib/model-config/core/latency-metric.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/core/===
+sampling-formatter.js[IV5T]: F:通道 的集成适配，对接 构建 | R:code:.vendor-pkg/timekit/lib/update-checker/core/throughput-profile.js | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+throughput-profile.js[KV4T]: F:队列 算法实现，输出 巡检 并缓存中间量 | R:code:.vendor-pkg/timekit/lib/update-checker/core/sampling-formatter.js | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/===
+backpressure-layout.js[EV3T]: F:校验 的入口，负责 验收 的初始化与分发 | R:code:.vendor-pkg/timekit/lib/update-checker/core/sampling-formatter.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+consistency-layout.json[FV2T]: F:配置文件：声明 渲染 与 压测 的取值 | R:code:.vendor-pkg/timekit/lib/update-checker/backpressure-layout.js | A:- | S:-
+
+===C:/projects/atlas/.vendor-pkg/timekit/lib/update-checker/ui/===
+snapshot-panel.css[FU2T]: F:导出 的声明式配置，定义 构建 | R:code:.vendor-pkg/timekit/lib/update-checker/ui/latency-layout.js | A:- | S:-
+latency-layout.js[EU3T]: F:程序入口，装配 索引 并暴露 巡检 接口 | R:code:.vendor-pkg/timekit/lib/update-checker/core/sampling-formatter.js | A:按需懒加载 | S:-
+
+===C:/projects/atlas/.vendor-pkg/timekit/routes/===
+quota-filter.js[EU7L]: F:配置 的入口，负责 验收 的初始化与分发 | R:code:.vendor-pkg/timekit/lib/snapshot-session.js, code:.vendor-pkg/timekit/lib/retention-scanner.js | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+
+===C:/projects/atlas/.vendor-pkg/timekit/tools/===
+replication-scheduler.js[EW5T]: F:程序入口，装配 会话 并暴露 压测 接口 | R:code:.vendor-pkg/timekit/lib/compaction-graph.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+consistency-import.js[EW5T]: F:缓存 的入口，负责 构建 的初始化与分发 | R:code:.vendor-pkg/timekit/lib/compaction-graph.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+
+===C:/projects/atlas/project/cards/math-survey/===
+snapshot-metric.js[XA2T]: F:工具脚本：批量处理 路由，输出 巡检 | R:- | A:- | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/projects/cards/===
+rollback-channel.html[EU4L]: F:模板 的入口，负责 验收 的初始化与分发 | R:- | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+compaction-loader.html[EU4L]: F:程序入口，装配 任务 并暴露 压测 接口 | R:code:projects/cards/rollback-channel.html | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/projects/drive-archive/===
+baseline-adapter.txt[OV4T]: F:词表 的运维脚本，用于 构建 | R:- | A:- | S:缺少必要字段时直接报错退出，不回退默认值
+
+===C:/projects/atlas/projects/drive-archive/extracted/===
+drift-store.md[SE5S]: F:基线 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/drive-archive/extracted/references/idempotency-bundle.md | A:- | S:与同一目录的配置存在优先级关系，后者覆盖前者
+
+===C:/projects/atlas/projects/drive-archive/extracted/references/===
+rollback-bundle.md[SA4T]: F:记录 快照 的规范与约定，供 验收 场景查阅 | R:code:projects/drive-archive/extracted/references/partition-timeline.md | A:- | S:体积超过阈值会触发分片，注意上限
+idempotency-bundle.md[SI5S]: F:通道 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/drive-archive/extracted/drift-store.md | A:- | S:路径大小写敏感，重命名前先检查引用
+throttling-search.md[SN4S]: F:记录 队列 的规范与约定，供 构建 场景查阅 | R:code:projects/drive-archive/extracted/references/replication-router.md | A:- | S:该处曾因字段缺失静默失败，改动需补断言
+tracing-transcript.md[SD4M]: F:校验 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/drive-archive/extracted/references/throttling-search.md | A:- | S:并发写入需加锁，否则可能丢更新
+threshold-graph.md[SU4S]: F:记录 渲染 的规范与约定，供 验收 场景查阅 | R:code:projects/drive-archive/extracted/references/throttling-search.md | A:- | S:缓存与落盘不一致时以落盘为准
+baseline-adapter.md[SN3T]: F:导出 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/drive-archive/extracted/references/idempotency-timeline.md | A:- | S:删除前需确认无挂载点，否则会有残留
+partition-timeline.md[SD4S]: F:记录 索引 的规范与约定，供 构建 场景查阅 | R:code:projects/drive-archive/extracted/references/throttling-search.md | A:- | S:改动后需重启生效，否则读到的仍是旧值
+idempotency-timeline.md[SS4S]: F:配置 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/drive-archive/extracted/references/baseline-adapter.md | A:- | S:该文件同时被多处引用，改前先确认调用方
+replication-router.md[SU4S]: F:记录 会话 的规范与约定，供 验收 场景查阅 | R:code:projects/drive-archive/extracted/references/throttling-search.md | A:- | S:缺少必要字段时直接报错退出，不回退默认值
+
+===C:/projects/atlas/projects/drive-archive/extracted/scripts/===
+rollout-config.cjs[KP4T]: F:缓存 算法实现，输出 压测 并缓存中间量 | R:code:projects/drive-archive/extracted/scripts/fanout-watcher.cjs | A:- | S:与同一目录的配置存在优先级关系，后者覆盖前者
+replication-manifest.sh[OV5L]: F:路由 的运维脚本，用于 构建 | R:code:projects/drive-archive/extracted/scripts/fanout-watcher.cjs | A:- | S:体积超过阈值会触发分片，注意上限
+fanout-watcher.cjs[EI6S]: F:程序入口，装配 模板 并暴露 巡检 接口 | R:code:projects/drive-archive/extracted/scripts/rollout-config.cjs, code:projects/drive-archive/extracted/drift-store.md | A:- | S:路径大小写敏感，重命名前先检查引用
+partition-queue.sh[OV4S]: F:任务 的运维脚本，用于 验收 | R:code:projects/drive-archive/extracted/scripts/fanout-watcher.cjs | A:- | S:该处曾因字段缺失静默失败，改动需补断言
+
+===C:/projects/atlas/projects/showcase/===
+backpressure-store.md[SQ4T]: F:词表 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/showcase/throttling-collector.html | A:- | S:并发写入需加锁，否则可能丢更新
+throttling-collector.html[EU4M]: F:基线 的入口，负责 构建 的初始化与分发 | R:code:projects/showcase/backpressure-store.md | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+
+===C:/projects/atlas/projects/worker-b-activity/===
+2026-08-07-baseline-scheduler.md[SA4T]: F:快照 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-08-retention-router.md[SA4T]: F:记录 通道 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-b-activity/2026-08-07-baseline-scheduler.md | A:- | S:-
+2026-08-08-warmup-note.md[SA4T]: F:队列 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-b-activity/2026-08-08-retention-router.md | A:- | S:-
+
+===C:/projects/atlas/projects/worker-b-patrol/===
+sampling-buffer.md[PO5T]: F:校验 的持久化读写，落盘为 构建 | R:code:projects/worker-b-patrol/sharding-config.md | A:- | S:缺少必要字段时直接报错退出，不回退默认值
+sharding-config.md[SS4T]: F:渲染 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-b-patrol/sampling-buffer.md | A:- | S:与同一目录的配置存在优先级关系，后者覆盖前者
+
+===C:/projects/atlas/projects/tolerance-chart/===
+threshold-buffer.py[XZ4L]: F:导出 的开发工具，辅助 验收 | R:- | A:- | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/projects/journal/===
+checkpoint-panel.md[SZ2T]: F:索引 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+throttling-report.md[SZ2T]: F:记录 配置 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+backlog-digest.md[SZ2T]: F:会话 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+latency-session.md[SZ2T]: F:记录 缓存 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+idempotency-adapter.md[SZ2T]: F:路由 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+threshold-indexer.md[SZ2T]: F:记录 模板 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+sharding-indexer.md[SZ2T]: F:任务 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+backpressure-filter.md[SZ2T]: F:记录 词表 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+drift-formatter.md[SZ2T]: F:基线 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+warmup-scheduler.md[SZ2T]: F:记录 快照 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+tracing-indexer.md[SZ2T]: F:通道 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+baseline-indexer.md[SZ2T]: F:记录 队列 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+compaction-buffer.md[SZ2T]: F:校验 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+rollback-manifest.md[SZ2T]: F:记录 渲染 的规范与约定，供 构建 场景查阅 | R:code:projects/journal/baseline-indexer.md | A:- | S:-
+baseline-session.md[SZ2T]: F:导出 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+backlog-search.md[SZ2T]: F:记录 索引 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+rollback-theme.md[SZ2T]: F:配置 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+latency-router.md[SZ2T]: F:记录 会话 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+backpressure-collector.md[SZ2T]: F:缓存 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+rollback-validator.md[SZ2T]: F:记录 路由 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+sharding-theme.md[SZ2T]: F:模板 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+replication-timeline.md[SZ2T]: F:记录 任务 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+coverage-outline.md[SZ2T]: F:词表 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+checkpoint-scanner.md[SZ2T]: F:记录 基线 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+sharding-digest.md[SZ2T]: F:快照 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/journal/checkpoint-scanner.md | A:- | S:-
+sharding-channel.md[SZ2T]: F:记录 通道 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+partition-channel.md[SZ2T]: F:队列 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+throughput-parser.md[SZ2T]: F:记录 校验 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+coverage-transcript.md[SZ2T]: F:渲染 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+consistency-resolver.md[SZ2T]: F:记录 导出 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+latency-formatter.md[SZ2T]: F:索引 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+fanout-layout.md[SZ2T]: F:记录 配置 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+latency-watcher.md[SZ2T]: F:会话 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+fanout-scanner.md[SZ2T]: F:记录 缓存 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+sharding-report.md[SZ2T]: F:路由 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+rollout-config.md[SZ2T]: F:记录 模板 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+partition-scanner.md[SZ2T]: F:任务 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+consistency-entry.md[SZ2T]: F:记录 词表 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+rollback-indexer.md[SZ2T]: F:基线 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+compaction-renderer.md[SZ2T]: F:记录 快照 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+checkpoint-watcher.md[SZ2T]: F:通道 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+throttling-adapter.md[SZ2T]: F:记录 队列 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+compaction-indexer.md[SZ2T]: F:校验 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+
+===C:/projects/atlas/projects/worker-a-activity/===
+2026-08-08-idempotency-export.md[SA4T]: F:记录 渲染 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-08-handoff-report.md[SA4T]: F:导出 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-08-08-idempotency-export.md | A:- | S:-
+2026-08-08-tracing-manifest.md[SA4T]: F:记录 索引 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-08-idempotency-registry.md[SA4T]: F:配置 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-09-partition-panel.md[SA4S]: F:记录 会话 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-09-handoff-renderer.md[SA4S]: F:缓存 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-09-snapshot-caption.md[SA4S]: F:记录 路由 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-09-handoff-parser.md[SA4T]: F:模板 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-09-eviction-config.md[SA4S]: F:记录 任务 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-09-throughput-queue.md[SA4S]: F:词表 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-09-coverage-renderer.md[SA4S]: F:记录 基线 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-09-snapshot-scheduler.md[SA4S]: F:快照 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-09-backlog-note.md[SA4S]: F:记录 通道 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-09-sampling-bundle.md[SA4S]: F:队列 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-08-09-backlog-note.md | A:- | S:-
+2026-08-09-tracing-digest.md[SA4S]: F:记录 校验 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-10-handoff-caption.md[SA4S]: F:渲染 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-10-tracing-report.md[SA4S]: F:记录 导出 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-10-sharding-config.md[SA4S]: F:索引 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-10-eviction-search.md[SA4S]: F:记录 配置 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-10-rollout-scanner.md[SA4S]: F:会话 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-10-sampling-worker.md[SA4T]: F:记录 缓存 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-10-replication-search.md[SA4S]: F:路由 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-10-coverage-formatter.md[SA4S]: F:记录 模板 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-10-baseline-indexer.md[SA4S]: F:任务 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-10-compaction-graph.md[SA4T]: F:记录 词表 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-10-throttling-buffer.md[SA4T]: F:基线 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-10-handoff-watcher.md[SA4T]: F:记录 快照 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-10-sampling-report.md[SA5L]: F:通道 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-10-tracing-profile.md[SA4T]: F:记录 队列 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-10-quota-store.md[SA4T]: F:校验 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-10-idempotency-cache.md[SA4T]: F:记录 渲染 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-10-warmup-watcher.md[SA4T]: F:导出 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-10-backpressure-timeline.md[SA4T]: F:记录 索引 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-10-backlog-profile.md[SA4T]: F:配置 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-10-latency-buffer.md[SA4T]: F:记录 会话 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-10-latency-profile.md[SA4T]: F:缓存 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-10-throttling-preview.md[SA4T]: F:记录 路由 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-11-snapshot-manifest.md[SA4S]: F:模板 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-11-warmup-resolver.md[SA4T]: F:记录 任务 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-11-snapshot-report.md[SA4T]: F:词表 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-11-coverage-metric.md[SA4T]: F:记录 基线 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-11-handoff-dispatcher.md[SA4T]: F:快照 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-11-baseline-sync.md[SA4S]: F:记录 通道 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-11-drift-watcher.md[SA4T]: F:队列 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-11-warmup-formatter.md[SA4T]: F:记录 校验 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-11-drift-loader.md[SA4T]: F:渲染 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-11-checkpoint-transcript.md[SA3T]: F:记录 导出 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-11-threshold-config.py[TA3T]: F:回归脚本：覆盖 索引 的 巡检 分支 | R:code:projects/worker-a-activity/2026-08-11-sharding-watcher.md | A:- | S:路径大小写敏感，重命名前先检查引用
+2026-08-11-sharding-watcher.md[SA4S]: F:记录 配置 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-08-11-threshold-config.py | A:- | S:-
+2026-08-11-retention-loader.md[SA4S]: F:会话 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-11-retention-queue.md[SA4S]: F:记录 缓存 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-11-compaction-layout.md[SA4S]: F:路由 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-11-retention-transcript.md[SA4S]: F:记录 模板 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-11-throttling-resolver.md[SA4S]: F:任务 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-11-coverage-search.md[SA4M]: F:记录 词表 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-11-partition-worker.md[SA4M]: F:基线 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-11-snapshot-queue.md[SA4S]: F:记录 快照 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-11-partition-loader.md[SA4M]: F:通道 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-11-partition-panel.md[SA4M]: F:记录 队列 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-11-snapshot-loader.md[SA4M]: F:校验 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-11-baseline-parser.md[SA4S]: F:记录 渲染 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-11-compaction-dispatcher.md[SA4S]: F:导出 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-08-11-baseline-parser.md | A:- | S:-
+2026-08-11-checkpoint-worker.md[SA4T]: F:记录 索引 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-08-11-compaction-dispatcher.md | A:- | S:-
+2026-08-14-rollout-report.md[SA4S]: F:配置 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-14-tracing-queue.md[SA4S]: F:记录 会话 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-14-sharding-store.md[SA4S]: F:缓存 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-14-latency-outline.md[SA4S]: F:记录 路由 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-14-eviction-scheduler.md[SA4M]: F:模板 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-14-rollback-graph.md[SA4S]: F:记录 任务 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-14-rollback-bundle.md[SA4M]: F:词表 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-14-throttling-caption.md[SA4S]: F:记录 基线 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-14-retention-sync.md[SA4T]: F:快照 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-14-consistency-digest.md[SA4S]: F:记录 通道 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-14-tracing-theme.md[SA4M]: F:队列 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-15-tracing-outline.md[SA4S]: F:记录 校验 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-15-warmup-session.md[SA4S]: F:渲染 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-15-baseline-watcher.md[SA4T]: F:记录 导出 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-16-consistency-router.md[SA4M]: F:索引 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-08-16-compaction-graph.md[SA4S]: F:记录 配置 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:-
+2026-08-16-fanout-queue.md[SA4S]: F:会话 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:- | S:-
+2026-08-17-consistency-channel.md[SA4M]: F:记录 缓存 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-08-27-quota-config.md[SA3T]: F:路由 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-09-10-rollback-config.md[SA5L]: F:记录 模板 的规范与约定，供 构建 场景查阅 | R:- | A:- | S:改动后需重启生效，否则读到的仍是旧值
+2026-09-11-warmup-transcript.md[SA4T]: F:任务 的说明文档，覆盖 巡检 的用法与边界 | R:code:partition-profile.md | A:- | S:-
+2026-09-11-eviction-worker.md[SA4T]: F:记录 词表 的规范与约定，供 验收 场景查阅 | R:- | A:- | S:-
+2026-09-11-rollout-indexer.md[SA4S]: F:基线 的说明文档，覆盖 压测 的用法与边界 | R:- | A:- | S:-
+2026-09-12-fanout-entry.md[SA4S]: F:记录 快照 的规范与约定，供 构建 场景查阅 | R:code:projects/showcase/backpressure-store.md | A:- | S:-
+2026-09-13-baseline-import.md[SA4T]: F:通道 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-a-activity/2026-08-11-partition-panel.md | A:- | S:-
+2026-09-13-threshold-collector.md[SA4T]: F:记录 队列 的规范与约定，供 验收 场景查阅 | R:code:skills/disk-cleanup/drift-store.md | A:- | S:-
+2026-09-13-sampling-loader.md[SA4T]: F:校验 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md | A:按需懒加载 | S:-
+2026-09-14-backpressure-timeline.md[SA5T]: F:记录 渲染 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-13-sampling-loader.md, code:projects/worker-a-activity/2026-09-14-snapshot-stream.md, code:projects/worker-a-activity/2026-09-14-throttling-caption.md | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+2026-09-14-snapshot-stream.md[SA4S]: F:导出 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+2026-09-14-throttling-caption.md[SA4S]: F:记录 索引 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md | A:启动时自动执行 | S:-
+2026-09-15-backlog-worker.md[SA4T]: F:配置 的说明文档，覆盖 压测 的用法与边界 | R:- | A:按需懒加载 | S:-
+2026-09-15-eviction-tag.md[SA4T]: F:记录 会话 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-22-rollout-tag.md | A:启动时自动执行 | S:-
+2026-09-15-compaction-worker.md[SA4T]: F:缓存 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:按需懒加载 | S:-
+2026-09-15-tracing-report.md[SA4S]: F:记录 路由 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-14-backpressure-timeline.md, code:projects/worker-a-activity/2026-09-15-backpressure-report.md | A:启动时自动执行 | S:-
+2026-09-15-backpressure-report.md[SA4S]: F:模板 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-15-tracing-report.md | A:按需懒加载 | S:-
+2026-09-16-baseline-renderer.md[SA4S]: F:记录 任务 的规范与约定，供 构建 场景查阅 | R:- | A:启动时自动执行 | S:-
+2026-09-16-throttling-import.md[SA4S]: F:词表 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:按需懒加载 | S:-
+2026-09-17-eviction-store.md[SA4T]: F:记录 基线 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-17-quota-layout.md | A:启动时自动执行 | S:-
+2026-09-17-quota-import.md[SA4T]: F:快照 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-17-quota-layout.md | A:按需懒加载 | S:-
+2026-09-17-quota-layout.md[SA4T]: F:记录 通道 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-17-eviction-store.md, code:projects/worker-a-activity/2026-09-18-compaction-loader.md | A:启动时自动执行 | S:-
+2026-09-17-eviction-theme.md[SA4T]: F:队列 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-a-activity/2026-09-18-retention-stream.md | A:按需懒加载 | S:-
+2026-09-18-checkpoint-export.md[SA4T]: F:记录 校验 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-18-compaction-loader.md | A:启动时自动执行 | S:-
+2026-09-18-compaction-loader.md[SA4T]: F:渲染 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-17-quota-layout.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md | A:按需懒加载 | S:-
+2026-09-18-retention-sync.md[SA4T]: F:记录 导出 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-18-retention-stream.md | A:启动时自动执行 | S:-
+2026-09-18-retention-stream.md[SA4T]: F:索引 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-a-activity/2026-09-17-eviction-theme.md, code:projects/worker-a-activity/2026-09-18-retention-sync.md | A:按需懒加载 | S:-
+2026-09-21-consistency-stream.md[SA4T]: F:记录 配置 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md | A:启动时自动执行 | S:-
+2026-09-21-rollback-report.md[SA4S]: F:会话 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-22-backlog-outline.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+2026-09-22-rollout-tag.md[SA4S]: F:记录 缓存 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-15-eviction-tag.md | A:启动时自动执行 | S:-
+2026-09-22-snapshot-scheduler.md[SA4T]: F:路由 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-a-activity/2026-09-30-warmup-registry.md | A:按需懒加载 | S:-
+2026-09-22-drift-timeline.md[SA4T]: F:记录 模板 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-22-baseline-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+2026-09-22-baseline-report.md[SA4S]: F:任务 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+2026-09-22-backlog-outline.md[SA4T]: F:记录 词表 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-28-sampling-queue.md | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+2026-09-25-threshold-export.md[SA3T]: F:基线 的说明文档，覆盖 巡检 的用法与边界 | R:- | A:按需懒加载 | S:-
+2026-09-25-snapshot-store.md[SA4T]: F:记录 快照 的规范与约定，供 验收 场景查阅 | R:code:projects/worker-a-activity/2026-09-25-compaction-theme.md | A:启动时自动执行 | S:-
+2026-09-25-compaction-theme.md[SA4T]: F:通道 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-25-snapshot-store.md | A:按需懒加载 | S:-
+2026-09-28-sampling-queue.md[SA5T]: F:记录 队列 的规范与约定，供 构建 场景查阅 | R:code:projects/worker-a-activity/2026-09-18-compaction-loader.md, code:projects/worker-a-activity/2026-09-21-rollback-report.md, code:projects/worker-a-activity/2026-09-22-baseline-report.md | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+2026-09-30-warmup-registry.md[SA4T]: F:校验 的说明文档，覆盖 巡检 的用法与边界 | R:code:projects/worker-a-activity/2026-09-22-snapshot-scheduler.md | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+2026-10-01-partition-resolver.md[SA4T]: F:记录 渲染 的规范与约定，供 验收 场景查阅 | R:- | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+2026-10-03-throttling-timeline.md[SA4T]: F:导出 的说明文档，覆盖 压测 的用法与边界 | R:code:projects/worker-a-activity/2026-09-22-snapshot-scheduler.md | A:按需懒加载 | S:-
+
+===C:/projects/atlas/projects/worker-c-patrol/===
+sampling-buffer.md[OO5T]: F:索引 的运维脚本，用于 构建 | R:code:projects/worker-a-patrol/rollout-bundle.ps1, code:projects/worker-a-patrol/compaction-resolver.ps1, code:projects/worker-a-patrol/tracing-loader.ps1, code:projects/worker-a-activity/2026-09-10-rollback-config.md | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/projects/worker-a-patrol/===
+rollout-bundle.ps1[XO4T]: F:工具脚本：批量处理 配置，输出 巡检 | R:code:projects/worker-a-activity/2026-09-10-rollback-config.md, code:projects/worker-c-patrol/sampling-buffer.md | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+sampling-buffer.md[OO2T]: F:会话 的运维脚本，用于 验收 | R:code:projects/worker-c-patrol/sampling-buffer.md | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+tracing-loader.ps1[XO3T]: F:工具脚本：批量处理 缓存，输出 压测 | R:code:projects/worker-c-patrol/sampling-buffer.md | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+compaction-resolver.ps1[XO3T]: F:路由 的开发工具，辅助 构建 | R:code:projects/worker-c-patrol/sampling-buffer.md | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/_avatars/===
+backpressure-store.md[SZ3T]: F:模板 的说明文档，覆盖 巡检 的用法与边界 | R:code:_avatars/handoff-stream.png, code:_avatars/snapshot-caption.png, code:_avatars/eviction-dispatcher.ico, code:_avatars/rollout-bundle.png | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+
+===C:/projects/atlas/reference/ai-animation-refs/===
+threshold-stream.md[SZ3T]: F:记录 任务 的规范与约定，供 验收 场景查阅 | R:code:reference/ai-animation-refs/coverage-bundle.md, code:reference/ai-animation-refs/coverage-preview.md | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+coverage-preview.md[SU3T]: F:词表 的说明文档，覆盖 压测 的用法与边界 | R:code:reference/ai-animation-refs/threshold-stream.md | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+coverage-validator.md[SU4T]: F:记录 基线 的规范与约定，供 构建 场景查阅 | R:code:reference/ai-animation-refs/threshold-stream.md | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+coverage-bundle.md[SU4T]: F:快照 的说明文档，覆盖 巡检 的用法与边界 | R:code:reference/ai-animation-refs/threshold-stream.md | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/reference/===
+snapshot-collector.md[SA4T]: F:记录 通道 的规范与约定，供 验收 场景查阅 | R:- | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/skills-draft/doc-audit-cards/===
+drift-store.md[SE5T]: F:队列 的说明文档，覆盖 压测 的用法与边界 | R:code:skills-draft/doc-audit-cards/references/drift-panel.md, code:skills-draft/doc-audit-cards/references/rollback-timeline.md, code:skills-draft/doc-audit-cards/references/idempotency-digest.md | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/skills-draft/doc-audit-cards/evals/===
+checkpoint-scanner.json[FQ3T]: F:校验 的声明式配置，定义 构建 | R:code:skills-draft/doc-audit-cards/drift-store.md | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+
+===C:/projects/atlas/skills-draft/doc-audit-cards/examples/===
+backpressure-store.md[SZ2T]: F:渲染 的说明文档，覆盖 巡检 的用法与边界 | R:code:skills-draft/doc-audit-cards/examples/drift-formatter.json | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+drift-formatter.json[FE3T]: F:导出 的声明式配置，定义 验收 | R:code:skills-draft/doc-audit-cards/scripts/throughput-router.py | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/skills-draft/doc-audit-cards/references/===
+drift-panel.md[SE3T]: F:索引 的说明文档，覆盖 压测 的用法与边界 | R:code:skills-draft/doc-audit-cards/drift-store.md | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+rollback-timeline.md[SE4T]: F:记录 配置 的规范与约定，供 构建 场景查阅 | R:code:skills-draft/doc-audit-cards/scripts/drift-digest.py, code:skills-draft/doc-audit-cards/scripts/throughput-router.py | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+idempotency-digest.md[SE3T]: F:会话 的说明文档，覆盖 巡检 的用法与边界 | R:code:skills-draft/doc-audit-cards/drift-store.md, code:skills-draft/doc-audit-cards/references/rollback-timeline.md | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+
+===C:/projects/atlas/skills-draft/doc-audit-cards/scripts/===
+throughput-router.py[XQ4S]: F:缓存 的开发工具，辅助 验收 | R:code:skills-draft/doc-audit-cards/scripts/drift-digest.py, code:skills-draft/doc-audit-cards/examples/drift-formatter.json | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+drift-digest.py[XQ4T]: F:工具脚本：批量处理 路由，输出 压测 | R:code:skills-draft/doc-audit-cards/scripts/throughput-router.py, code:skills-draft/doc-audit-cards/references/rollback-timeline.md | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/skills-draft/session-anchor/===
+drift-store.md[SE5S]: F:记录 模板 的规范与约定，供 构建 场景查阅 | R:code:skills-draft/session-anchor/scripts/latency-tag.py, code:skills-draft/session-anchor/references/rollback-registry.md, code:skills-draft/session-anchor/references/retention-router.md | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/skills-draft/session-anchor/examples/===
+sharding-note.md[SE3T]: F:任务 的说明文档，覆盖 巡检 的用法与边界 | R:code:skills-draft/session-anchor/drift-store.md, code:skills-draft/session-anchor/examples/drift-sync.md | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+drift-sync.md[SE4T]: F:记录 词表 的规范与约定，供 验收 场景查阅 | R:code:skills-draft/session-anchor/scripts/latency-tag.py, code:skills-draft/session-anchor/references/rollback-registry.md | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+
+===C:/projects/atlas/skills-draft/session-anchor/references/===
+rollback-registry.md[SQ4T]: F:基线 的说明文档，覆盖 压测 的用法与边界 | R:code:skills-draft/session-anchor/scripts/latency-tag.py, code:skills-draft/session-anchor/drift-store.md | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+retention-router.md[SE4T]: F:记录 快照 的规范与约定，供 构建 场景查阅 | R:code:skills-draft/session-anchor/drift-store.md | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/skills-draft/session-anchor/scripts/===
+latency-tag.py[XQ4S]: F:工具脚本：批量处理 通道，输出 巡检 | R:code:skills-draft/session-anchor/references/rollback-registry.md, code:skills-draft/session-anchor/drift-store.md | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+
+===C:/projects/atlas/skills/disk-cleanup/===
+drift-store.md[SE5T]: F:记录 队列 的规范与约定，供 验收 场景查阅 | R:code:skills/disk-cleanup/scripts/consistency-filter.ps1, code:skills/disk-cleanup/scripts/coverage-search.ps1, code:skills/disk-cleanup/scripts/coverage-theme.ps1, code:skills/disk-cleanup/references/latency-cache.md | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+
+===C:/projects/atlas/skills/disk-cleanup/examples/===
+consistency-sync.md[SE3T]: F:校验 的说明文档，覆盖 压测 的用法与边界 | R:code:skills/disk-cleanup/drift-store.md | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+
+===C:/projects/atlas/skills/disk-cleanup/references/===
+latency-cache.md[SS4T]: F:记录 渲染 的规范与约定，供 构建 场景查阅 | R:code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/coverage-sync.md | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+coverage-sync.md[SP4T]: F:导出 的说明文档，覆盖 巡检 的用法与边界 | R:code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/latency-cache.md | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+snapshot-parser.md[SO4S]: F:记录 索引 的规范与约定，供 验收 场景查阅 | R:code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/latency-cache.md | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/skills/disk-cleanup/scripts/===
+coverage-search.ps1[XO4T]: F:工具脚本：批量处理 配置，输出 压测 | R:code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/scripts/consistency-filter.ps1 | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+coverage-theme.ps1[OR5T]: F:会话 的运维脚本，用于 构建 | R:code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/references/latency-cache.md | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+consistency-filter.ps1[XO4T]: F:工具脚本：批量处理 缓存，输出 巡检 | R:code:skills/disk-cleanup/drift-store.md, code:skills/disk-cleanup/scripts/coverage-search.ps1 | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+
+===C:/projects/atlas/weekly/===
+2026-09-23-coverage-registry.md[SA3T]: F:记录 路由 的规范与约定，供 验收 场景查阅 | R:code:reference/ai-animation-refs/threshold-stream.md, code:reference/ai-animation-refs/coverage-bundle.md | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/research/===
+2026-10-01-warmup-scanner.md[SA4T]: F:模板 的说明文档，覆盖 压测 的用法与边界 | R:- | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+
+===C:/projects/atlas/widgets/agent-methodology-index/===
+tracing-metric.html[EU4L]: F:任务 的入口，负责 构建 的初始化与分发 | R:- | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+
+===C:/projects/atlas/widgets/os-beta-feedback/===
+tracing-metric.html[EU4M]: F:程序入口，装配 词表 并暴露 巡检 接口 | R:- | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+
+===C:/projects/atlas/widgets/canyon-note/===
+tracing-metric.html[EU4S]: F:基线 的入口，负责 验收 的初始化与分发 | R:- | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+
+===C:/projects/atlas/widgets/overview-card-2/===
+tracing-metric.html[EU4L]: F:程序入口，装配 快照 并暴露 压测 接口 | R:code:widgets/overview-card-2/assets/retention-preview.jpg | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/widgets/overview-card/===
+tracing-metric.html[EU4L]: F:通道 的入口，负责 构建 的初始化与分发 | R:code:widgets/overview-card/assets/rollback-theme.jpg | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/widgets/slides-deck/assets/===
+consistency-config.js[LU3L]: F:SDK 模块：封装 队列，供 巡检 调用 | R:code:widgets/slides-deck/tracing-metric.html | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/widgets/slides-deck/===
+tracing-metric.html[EU4L]: F:校验 的入口，负责 验收 的初始化与分发 | R:code:widgets/slides-deck/assets/consistency-config.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+
+===C:/projects/atlas/widgets/todo-list-2/===
+tracing-metric.html[EU4M]: F:程序入口，装配 渲染 并暴露 压测 接口 | R:- | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+
+===C:/projects/atlas/widgets/todo-list/===
+tracing-metric.html[EU4M]: F:导出 的入口，负责 构建 的初始化与分发 | R:- | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+
+===C:/projects/atlas/widgets/chess-duel-card/assets/===
+consistency-indexer.js[KU4M]: F:索引 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/backpressure-layout.js, code:widgets/chess-duel-card/assets/throughput-collector.js | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+rollback-sync.css[FU2S]: F:配置 的声明式配置，定义 验收 | R:code:widgets/chess-duel-card/tracing-metric.html | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+throughput-collector.js[EU4L]: F:程序入口，装配 会话 并暴露 压测 接口 | R:code:widgets/chess-duel-card/assets/engine/backpressure-layout.js, code:widgets/chess-duel-card/assets/consistency-indexer.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+sampling-channel.svg[FU2T]: F:缓存 的声明式配置，定义 构建 | R:- | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+compaction-queue.js[KU3T]: F:路由 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-duel-card/assets/throughput-collector.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/widgets/chess-duel-card/assets/engine/===
+tracing-bundle.js[KU3T]: F:模板 的计算实现，按 验收 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+throughput-stream.js[KU4S]: F:任务 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/backlog-channel.js | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+fanout-validator.js[KU4M]: F:词表 的计算实现，按 构建 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+tracing-queue.js[KU4S]: F:基线 算法实现，输出 巡检 并缓存中间量 | R:- | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+baseline-theme.js[KU4S]: F:快照 的计算实现，按 验收 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+replication-config.js[KU3T]: F:通道 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+retention-store.js[KU3T]: F:队列 的计算实现，按 构建 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+handoff-bundle.js[KU3T]: F:校验 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+backpressure-layout.js[EU4T]: F:渲染 的入口，负责 验收 的初始化与分发 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/backlog-channel.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+snapshot-parser.js[KU3T]: F:导出 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+tracing-search.js[KU3T]: F:索引 的计算实现，按 构建 推导结果 | R:code:widgets/chess-duel-card/assets/engine/throughput-stream.js | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+drift-panel.js[KU4T]: F:配置 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+backlog-channel.js[KU3T]: F:会话 的计算实现，按 验收 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+drift-export.js[KU3T]: F:缓存 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+consistency-layout.js[KU3S]: F:路由 的计算实现，按 构建 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+replication-export.js[KU3T]: F:模板 算法实现，输出 巡检 并缓存中间量 | R:- | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+warmup-router.js[KU3T]: F:任务 的计算实现，按 验收 推导结果 | R:code:widgets/chess-duel-card/assets/engine/tracing-queue.js, code:widgets/chess-duel-card/assets/engine/fanout-validator.js | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+
+===C:/projects/atlas/widgets/chess-duel-card/===
+tracing-metric.html[EU4T]: F:程序入口，装配 词表 并暴露 压测 接口 | R:code:widgets/chess-duel-card/assets/throughput-collector.js, code:widgets/chess-duel-card/assets/rollback-sync.css | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+
+===C:/projects/atlas/widgets/chess-replica-card/assets/===
+consistency-indexer.js[KU4M]: F:基线 的计算实现，按 构建 推导结果 | R:code:widgets/chess-replica-card/assets/engine/backpressure-layout.js, code:widgets/chess-replica-card/assets/throughput-collector.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+rollback-sync.css[FU2S]: F:配置文件：声明 快照 与 巡检 的取值 | R:code:widgets/chess-replica-card/tracing-metric.html | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+throughput-collector.js[EU4L]: F:通道 的入口，负责 验收 的初始化与分发 | R:code:widgets/chess-replica-card/assets/engine/backpressure-layout.js, code:widgets/chess-replica-card/assets/consistency-indexer.js | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+sampling-channel.svg[FU2T]: F:配置文件：声明 队列 与 压测 的取值 | R:- | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+compaction-queue.js[KU3T]: F:校验 的计算实现，按 构建 推导结果 | R:code:widgets/chess-replica-card/assets/throughput-collector.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+
+===C:/projects/atlas/widgets/chess-replica-card/assets/engine/===
+tracing-bundle.js[KU3T]: F:渲染 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+throughput-stream.js[KU4S]: F:导出 的计算实现，按 验收 推导结果 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/backlog-channel.js | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+fanout-validator.js[KU4M]: F:索引 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+tracing-queue.js[KU4S]: F:配置 的计算实现，按 构建 推导结果 | R:- | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+baseline-theme.js[KU4S]: F:会话 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+replication-config.js[KU3T]: F:缓存 的计算实现，按 验收 推导结果 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+retention-store.js[KU3T]: F:路由 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+handoff-bundle.js[KU3T]: F:模板 的计算实现，按 构建 推导结果 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+backpressure-layout.js[EU4T]: F:程序入口，装配 任务 并暴露 巡检 接口 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/backlog-channel.js | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+snapshot-parser.js[KU3T]: F:词表 的计算实现，按 验收 推导结果 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值
+tracing-search.js[KU3T]: F:基线 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/throughput-stream.js | A:按需懒加载 | S:与同一目录的配置存在优先级关系，后者覆盖前者
+drift-panel.js[KU4T]: F:快照 的计算实现，按 构建 推导结果 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js | A:启动时自动执行 | S:体积超过阈值会触发分片，注意上限
+backlog-channel.js[KU3T]: F:通道 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js | A:按需懒加载 | S:路径大小写敏感，重命名前先检查引用
+drift-export.js[KU3T]: F:队列 的计算实现，按 验收 推导结果 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/handoff-bundle.js | A:启动时自动执行 | S:该处曾因字段缺失静默失败，改动需补断言
+consistency-layout.js[KU3S]: F:校验 算法实现，输出 压测 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js | A:按需懒加载 | S:并发写入需加锁，否则可能丢更新
+replication-export.js[KU3T]: F:渲染 的计算实现，按 构建 推导结果 | R:- | A:启动时自动执行 | S:缓存与落盘不一致时以落盘为准
+warmup-router.js[KU3T]: F:导出 算法实现，输出 巡检 并缓存中间量 | R:code:widgets/chess-replica-card/assets/engine/tracing-queue.js, code:widgets/chess-replica-card/assets/engine/fanout-validator.js | A:按需懒加载 | S:删除前需确认无挂载点，否则会有残留
+
+===C:/projects/atlas/widgets/chess-replica-card/===
+tracing-metric.html[EU4T]: F:索引 的入口，负责 验收 的初始化与分发 | R:code:widgets/chess-replica-card/assets/throughput-collector.js, code:widgets/chess-replica-card/assets/rollback-sync.css | A:启动时自动执行 | S:改动后需重启生效，否则读到的仍是旧值
+
+===C:/projects/atlas/widgets/security-tools-map/===
+tracing-metric.html[EU4M]: F:程序入口，装配 配置 并暴露 压测 接口 | R:- | A:按需懒加载 | S:该文件同时被多处引用，改前先确认调用方
+
+===C:/projects/atlas/widgets/chess-rules-preview/===
+tracing-metric.html[EU4S]: F:会话 的入口，负责 构建 的初始化与分发 | R:- | A:启动时自动执行 | S:缺少必要字段时直接报错退出，不回退默认值

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>链路体检</title>
+  <link rel="stylesheet" href="./assets/app-ui.css">
+  <link rel="stylesheet" href="./assets/chain.css">
+</head>
+<body>
+  <!-- 链路体检卡：一次体检 = 一张能递出去的卡。
+       六环：初始化 / 清点 / 基线 / 索引 / 核对 / 检索。
+       每环带证据与来源文件，可溯源；缺环时直接给修复步骤。
+
+       界面设计契约（与 ui/panel.html、ui/report.html 同一套）：
+         1. 一个 id 只出现一次；状态用 [data-s] 切换，不为每态复制 DOM。
+         2. JS 只填内容、只切状态，不增删区块容器。
+         3. 不设右上角徽标：官方 card-guide §2 规定顶部 100x40 留空，
+            徽标跟在标题后面（左侧流向），窄屏也不会压到宿主控件。
+         4. 自取数据（宿主不传触发消息 payload，见 ui/CARD-DOCTRINE.md §2.4）。 -->
+  <main id="root" data-hana-app-ui data-status="loading">
+
+    <!-- ===== 整页态：空 / 错（与链体互斥） ===== -->
+    <section id="ch-center" class="ch-center" hidden>
+      <div id="center-mount"></div>
+    </section>
+
+    <!-- ===== 链体 ===== -->
+    <div id="ch-body" hidden>
+
+      <!-- 身份：徽标跟在标题后，不占右上 -->
+      <header class="ch">
+        <h1 id="ch-name">—</h1>
+        <span id="ch-slug" class="slug mono"></span>
+        <span id="ch-badge-mount" class="ch-badge"></span>
+      </header>
+      <p id="ch-dir" class="ch-dir mono"></p>
+
+      <!-- 六环 -->
+      <section class="chain" id="rings" aria-label="索引链路六环"></section>
+
+      <!-- 缺环修复步骤（全绿时隐藏，含在 summary.repair 里） -->
+      <section class="fix" id="fix" hidden>
+        <h3 id="fix-title">这条链断在某一环</h3>
+        <ol id="fix-list"></ol>
+        <p class="after">修好后这里会自己亮起来，不用回来手动刷新。</p>
+      </section>
+
+      <!-- 三权：知情 / 打断 / 查看 -->
+      <section class="rights" aria-label="三权">
+        <div class="rt">
+          <h4>知情</h4>
+          <p>每一环都挂着证据与来源文件，可点开溯源</p>
+        </div>
+        <div class="rt">
+          <h4>打断</h4>
+          <p>清点随时可停；索引由 Agent 写，这里只递话不代按</p>
+        </div>
+        <div class="rt">
+          <h4>查看</h4>
+          <p>点任一环展开细节，或一键打开面板</p>
+        </div>
+      </section>
+
+      <div class="ch-actions">
+        <div id="act-rescan"></div>
+        <div id="act-panel"></div>
+      </div>
+
+      <!-- 来路：哪条通道答的、还是回退到了样本 -->
+      <p id="ch-source" class="ch-src"></p>
+    </div>
+
+  </main>
+
+  <script type="module" src="./assets/chain.js"></script>
+</body>
+</html>
