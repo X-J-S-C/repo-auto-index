@@ -48,6 +48,7 @@ node shoot-chain.mjs chain-ok.png 720 900 --chain=broken   # 链路卡三态
 | **`_no-local-copies.mjs`** | **守住「测试不持副本」这条约定：查同名文件与路径拼接，exit 0 干净 / 2 有副本** |
 | **`_assets-closure.mjs`** | **从 manifest 的卡片 route 求 UI 资源引用闭包（含动态 import），用于发布包自检** |
 | **`_bleed-check.mjs`** | **卡片右上留空区：官方 card-guide §2 要求顶部 100×40 不放文字与控件。只查流内卡（整页卡有自己的标题栏，不在此列）** |
+| **`_privacy-check.mjs`** | **脱敏机检：查仓库与安装包里有没有本机身份痕迹（用户名、家目录、私有项目名）。见下方专节** |
 | `_check.mjs` / `_check-index.mjs` | 早期检查脚本（保留备查） |
 
 四个纯静态检查不需要浏览器与服务，跑起来是一秒钟的事：
@@ -56,6 +57,7 @@ node shoot-chain.mjs chain-ok.png 720 900 --chain=broken   # 链路卡三态
 node _contract-check.mjs     # 契约与实现是否脱节
 node _no-local-copies.mjs    # 有没有把前端副本又搬回来
 node _assets-closure.mjs     # 卡片的资源引用有没有悬空
+node _privacy-check.mjs      # 有没有本机身份痕迹
 node _bleed-check.mjs        # 卡片右上有没有压到宿主控件区（要浏览器）
 ```
 
@@ -83,6 +85,36 @@ detached windows, respect actual host controls; this is not a universal limit.
 ```powershell
 node _bleed-check.mjs   # exit 0 干净 / 2 有压区
 ```
+
+## 脱敏机检（2026-10-15 新增）
+
+本仓库要公开发布，而它的测试数据最初是从一份真实知识库生成的。发布前那次
+是手工查的（逐文件过 377 个），手工意味着下次可能忘了查。本脚本把那次判断变成判据。
+
+```powershell
+node _privacy-check.mjs                  # 查 App 目录（= 会进包的部分）
+node _privacy-check.mjs --repo           # 查整个仓库（只算会提交的文件）
+node _privacy-check.mjs --zip <path>     # 查一个已打好的包
+node _privacy-check.mjs --words <file>   # 追加私有词表（每行一词，# 开头为注释）
+```
+
+**一条硬约束：脚本自身不得写死任何敏感词。**
+它随公开仓库分发，若把用户名、项目名写进源码，检查器自己就成了泄漏源。
+所以身份是**运行时从本机推导**的：当前用户名 + 本机所有用户目录名。
+换一台机器跑，它查的就是那台机器的身份。
+
+两个通用判据：
+
+- 身份词按**词边界**匹配，避免短词（如三字母用户名）撞进随机串
+- `C:\Users\<非占位名>` 形态；占位名白名单（`me` / `you` / `example` …）不计入
+
+PNG 不只看元数据块，还把 IDAT 解压出来找长可打印串（真藏文本会留下长串）。
+
+**反证已验证**：造了 5 类含痕迹的样本（文本路径、真串身份词、注释、二进制可打印串、
+PNG 的 tEXt 块），全部被抓到，exit 2。一个从不报红的检查器等于没有检查器。
+
+**误报处理**：`ui/assets/chain.js` 与 `report.js` 里的 `C:\Users\me\my-repo` 是
+刻意写的示范占位（内联样本用），会被归入「占位名（不计入）」，不报红。
 
 适用范围从 manifest 推导，不硬编码：只查**流内卡**（有 `route`、未声明
 `realization: "page"`、不是 `siteNavEntry`）。整页卡（如 panel）有自己的页面
